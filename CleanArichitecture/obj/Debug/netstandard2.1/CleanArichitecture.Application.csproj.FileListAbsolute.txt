@@ -1,0 +1,4 @@
+C:\Users\C1-Student04\source\repos\CleanArchitecture\CleanArichitecture\obj\Debug\netstandard2.1\CleanArichitecture.Application.csproj.AssemblyReference.cache
+C:\Users\C1-Student04\source\repos\CleanArchitecture\CleanArichitecture\obj\Debug\netstandard2.1\CleanArichitecture.Application.AssemblyInfoInputs.cache
+C:\Users\C1-Student04\source\repos\CleanArchitecture\CleanArichitecture\obj\Debug\netstandard2.1\CleanArichitecture.Application.AssemblyInfo.cs
+C:\Users\C1-Student04\source\repos\CleanArchitecture\CleanArichitecture\obj\Debug\netstandard2.1\CleanArichitecture.Application.csproj.CoreCompileInputs.cache

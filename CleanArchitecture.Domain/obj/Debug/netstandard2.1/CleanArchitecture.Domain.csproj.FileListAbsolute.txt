@@ -1,0 +1,8 @@
+C:\Users\C1-Student04\source\repos\CleanArchitecture\CleanArchitecture.Domain\bin\Debug\netstandard2.1\CleanArchitecture.Domain.deps.json
+C:\Users\C1-Student04\source\repos\CleanArchitecture\CleanArchitecture.Domain\bin\Debug\netstandard2.1\CleanArchitecture.Domain.dll
+C:\Users\C1-Student04\source\repos\CleanArchitecture\CleanArchitecture.Domain\bin\Debug\netstandard2.1\CleanArchitecture.Domain.pdb
+C:\Users\C1-Student04\source\repos\CleanArchitecture\CleanArchitecture.Domain\obj\Debug\netstandard2.1\CleanArchitecture.Domain.AssemblyInfoInputs.cache
+C:\Users\C1-Student04\source\repos\CleanArchitecture\CleanArchitecture.Domain\obj\Debug\netstandard2.1\CleanArchitecture.Domain.AssemblyInfo.cs
+C:\Users\C1-Student04\source\repos\CleanArchitecture\CleanArchitecture.Domain\obj\Debug\netstandard2.1\CleanArchitecture.Domain.csproj.CoreCompileInputs.cache
+C:\Users\C1-Student04\source\repos\CleanArchitecture\CleanArchitecture.Domain\obj\Debug\netstandard2.1\CleanArchitecture.Domain.dll
+C:\Users\C1-Student04\source\repos\CleanArchitecture\CleanArchitecture.Domain\obj\Debug\netstandard2.1\CleanArchitecture.Domain.pdb
