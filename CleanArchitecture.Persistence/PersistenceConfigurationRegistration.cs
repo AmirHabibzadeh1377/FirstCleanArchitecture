@@ -12,7 +12,7 @@ namespace CleanArchitecture.Persistence
         {
             services.AddDbContext<CleanArchitecture_DBContext>(options =>
             {
-                options.UseSqlServer(configuration.GetConnectionString(""));
+                options.UseSqlServer(configuration.GetConnectionString("CleanArchitectureConnectionString"));
             });
 
             services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
