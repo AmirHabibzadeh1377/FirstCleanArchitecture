@@ -1,0 +1,4 @@
+C:\Users\C1-Student04\source\repos\CleanArchitecture\CleanArchitecture.Persistence\obj\Debug\netstandard2.1\CleanArchitecture.Persistence.csproj.AssemblyReference.cache
+C:\Users\C1-Student04\source\repos\CleanArchitecture\CleanArchitecture.Persistence\obj\Debug\netstandard2.1\CleanArchitecture.Persistence.AssemblyInfoInputs.cache
+C:\Users\C1-Student04\source\repos\CleanArchitecture\CleanArchitecture.Persistence\obj\Debug\netstandard2.1\CleanArchitecture.Persistence.AssemblyInfo.cs
+C:\Users\C1-Student04\source\repos\CleanArchitecture\CleanArchitecture.Persistence\obj\Debug\netstandard2.1\CleanArchitecture.Persistence.csproj.CoreCompileInputs.cache
