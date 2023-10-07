@@ -1,0 +1,14 @@
+C:\Users\C1-Student04\source\repos\CleanArchitecture\CleanArchitecture.Infrastructure\bin\Debug\netstandard2.1\CleanArchitecture.Infrastructure.deps.json
+C:\Users\C1-Student04\source\repos\CleanArchitecture\CleanArchitecture.Infrastructure\bin\Debug\netstandard2.1\CleanArchitecture.Infrastructure.dll
+C:\Users\C1-Student04\source\repos\CleanArchitecture\CleanArchitecture.Infrastructure\bin\Debug\netstandard2.1\CleanArchitecture.Infrastructure.pdb
+C:\Users\C1-Student04\source\repos\CleanArchitecture\CleanArchitecture.Infrastructure\bin\Debug\netstandard2.1\CleanArchitecture.Domain.dll
+C:\Users\C1-Student04\source\repos\CleanArchitecture\CleanArchitecture.Infrastructure\bin\Debug\netstandard2.1\CleanArichitecture.Application.dll
+C:\Users\C1-Student04\source\repos\CleanArchitecture\CleanArchitecture.Infrastructure\bin\Debug\netstandard2.1\CleanArichitecture.Application.pdb
+C:\Users\C1-Student04\source\repos\CleanArchitecture\CleanArchitecture.Infrastructure\bin\Debug\netstandard2.1\CleanArchitecture.Domain.pdb
+C:\Users\C1-Student04\source\repos\CleanArchitecture\CleanArchitecture.Infrastructure\obj\Debug\netstandard2.1\CleanArchitecture.Infrastructure.csproj.AssemblyReference.cache
+C:\Users\C1-Student04\source\repos\CleanArchitecture\CleanArchitecture.Infrastructure\obj\Debug\netstandard2.1\CleanArchitecture.Infrastructure.AssemblyInfoInputs.cache
+C:\Users\C1-Student04\source\repos\CleanArchitecture\CleanArchitecture.Infrastructure\obj\Debug\netstandard2.1\CleanArchitecture.Infrastructure.AssemblyInfo.cs
+C:\Users\C1-Student04\source\repos\CleanArchitecture\CleanArchitecture.Infrastructure\obj\Debug\netstandard2.1\CleanArchitecture.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\C1-Student04\source\repos\CleanArchitecture\CleanArchitecture.Infrastructure\obj\Debug\netstandard2.1\CleanArchitecture.Infrastructure.csproj.CopyComplete
+C:\Users\C1-Student04\source\repos\CleanArchitecture\CleanArchitecture.Infrastructure\obj\Debug\netstandard2.1\CleanArchitecture.Infrastructure.dll
+C:\Users\C1-Student04\source\repos\CleanArchitecture\CleanArchitecture.Infrastructure\obj\Debug\netstandard2.1\CleanArchitecture.Infrastructure.pdb

@@ -3,11 +3,13 @@ using System.Reflection;
 
 namespace CleanArichitecture.Application
 {
-    public class ApplicationServiceRegistration
+    public static class ApplicationServiceRegistration
     {
-        public void ConfigureApplicationServices(IServiceCollection services)
+        public static IServiceCollection ConfigureApplicationServices(this  IServiceCollection services)
         {
             services.AddAutoMapper(Assembly.GetExecutingAssembly());
+
+            return services;
         }
     }
 }

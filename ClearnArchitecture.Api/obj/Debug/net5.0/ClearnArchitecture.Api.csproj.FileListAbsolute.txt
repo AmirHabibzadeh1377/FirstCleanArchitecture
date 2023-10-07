@@ -1,0 +1,7 @@
+C:\Users\C1-Student04\source\repos\CleanArchitecture\ClearnArchitecture.Api\obj\Debug\net5.0\ClearnArchitecture.Api.csproj.AssemblyReference.cache
+C:\Users\C1-Student04\source\repos\CleanArchitecture\ClearnArchitecture.Api\obj\Debug\net5.0\ClearnArchitecture.Api.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\C1-Student04\source\repos\CleanArchitecture\ClearnArchitecture.Api\obj\Debug\net5.0\ClearnArchitecture.Api.AssemblyInfoInputs.cache
+C:\Users\C1-Student04\source\repos\CleanArchitecture\ClearnArchitecture.Api\obj\Debug\net5.0\ClearnArchitecture.Api.AssemblyInfo.cs
+C:\Users\C1-Student04\source\repos\CleanArchitecture\ClearnArchitecture.Api\obj\Debug\net5.0\ClearnArchitecture.Api.csproj.CoreCompileInputs.cache
+C:\Users\C1-Student04\source\repos\CleanArchitecture\ClearnArchitecture.Api\obj\Debug\net5.0\ClearnArchitecture.Api.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\C1-Student04\source\repos\CleanArchitecture\ClearnArchitecture.Api\obj\Debug\net5.0\ClearnArchitecture.Api.MvcApplicationPartsAssemblyInfo.cache

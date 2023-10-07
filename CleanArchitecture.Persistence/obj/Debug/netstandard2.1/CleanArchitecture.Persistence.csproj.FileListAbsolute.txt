@@ -2,3 +2,13 @@ C:\Users\C1-Student04\source\repos\CleanArchitecture\CleanArchitecture.Persisten
 C:\Users\C1-Student04\source\repos\CleanArchitecture\CleanArchitecture.Persistence\obj\Debug\netstandard2.1\CleanArchitecture.Persistence.AssemblyInfoInputs.cache
 C:\Users\C1-Student04\source\repos\CleanArchitecture\CleanArchitecture.Persistence\obj\Debug\netstandard2.1\CleanArchitecture.Persistence.AssemblyInfo.cs
 C:\Users\C1-Student04\source\repos\CleanArchitecture\CleanArchitecture.Persistence\obj\Debug\netstandard2.1\CleanArchitecture.Persistence.csproj.CoreCompileInputs.cache
+C:\Users\C1-Student04\source\repos\CleanArchitecture\CleanArchitecture.Persistence\bin\Debug\netstandard2.1\CleanArchitecture.Persistence.deps.json
+C:\Users\C1-Student04\source\repos\CleanArchitecture\CleanArchitecture.Persistence\bin\Debug\netstandard2.1\CleanArchitecture.Persistence.dll
+C:\Users\C1-Student04\source\repos\CleanArchitecture\CleanArchitecture.Persistence\bin\Debug\netstandard2.1\CleanArchitecture.Persistence.pdb
+C:\Users\C1-Student04\source\repos\CleanArchitecture\CleanArchitecture.Persistence\bin\Debug\netstandard2.1\CleanArchitecture.Domain.dll
+C:\Users\C1-Student04\source\repos\CleanArchitecture\CleanArchitecture.Persistence\bin\Debug\netstandard2.1\CleanArichitecture.Application.dll
+C:\Users\C1-Student04\source\repos\CleanArchitecture\CleanArchitecture.Persistence\bin\Debug\netstandard2.1\CleanArichitecture.Application.pdb
+C:\Users\C1-Student04\source\repos\CleanArchitecture\CleanArchitecture.Persistence\bin\Debug\netstandard2.1\CleanArchitecture.Domain.pdb
+C:\Users\C1-Student04\source\repos\CleanArchitecture\CleanArchitecture.Persistence\obj\Debug\netstandard2.1\CleanArchitecture.Persistence.csproj.CopyComplete
+C:\Users\C1-Student04\source\repos\CleanArchitecture\CleanArchitecture.Persistence\obj\Debug\netstandard2.1\CleanArchitecture.Persistence.dll
+C:\Users\C1-Student04\source\repos\CleanArchitecture\CleanArchitecture.Persistence\obj\Debug\netstandard2.1\CleanArchitecture.Persistence.pdb
