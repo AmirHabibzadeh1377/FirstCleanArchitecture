@@ -27,3 +27,18 @@ C:\Users\Student\Desktop\New folder\FirstCleanArchitecture\CleanArchitecture.Per
 C:\Users\Student\Desktop\New folder\FirstCleanArchitecture\CleanArchitecture.Persistence\obj\Debug\netstandard2.1\CleanArchitecture.Persistence.csproj.CopyComplete
 C:\Users\Student\Desktop\New folder\FirstCleanArchitecture\CleanArchitecture.Persistence\obj\Debug\netstandard2.1\CleanArchitecture.Persistence.dll
 C:\Users\Student\Desktop\New folder\FirstCleanArchitecture\CleanArchitecture.Persistence\obj\Debug\netstandard2.1\CleanArchitecture.Persistence.pdb
+C:\Users\C1-Student04\Desktop\FirstCleanArchitecture\CleanArchitecture.Persistence\bin\Debug\netstandard2.1\CleanArchitecture.Persistence.deps.json
+C:\Users\C1-Student04\Desktop\FirstCleanArchitecture\CleanArchitecture.Persistence\bin\Debug\netstandard2.1\CleanArchitecture.Persistence.dll
+C:\Users\C1-Student04\Desktop\FirstCleanArchitecture\CleanArchitecture.Persistence\bin\Debug\netstandard2.1\CleanArchitecture.Persistence.pdb
+C:\Users\C1-Student04\Desktop\FirstCleanArchitecture\CleanArchitecture.Persistence\bin\Debug\netstandard2.1\CleanArchitecture.Domain.dll
+C:\Users\C1-Student04\Desktop\FirstCleanArchitecture\CleanArchitecture.Persistence\bin\Debug\netstandard2.1\CleanArichitecture.Application.dll
+C:\Users\C1-Student04\Desktop\FirstCleanArchitecture\CleanArchitecture.Persistence\bin\Debug\netstandard2.1\CleanArichitecture.Application.pdb
+C:\Users\C1-Student04\Desktop\FirstCleanArchitecture\CleanArchitecture.Persistence\bin\Debug\netstandard2.1\CleanArchitecture.Domain.pdb
+C:\Users\C1-Student04\Desktop\FirstCleanArchitecture\CleanArchitecture.Persistence\obj\Debug\netstandard2.1\CleanArchitecture.Persistence.csproj.AssemblyReference.cache
+C:\Users\C1-Student04\Desktop\FirstCleanArchitecture\CleanArchitecture.Persistence\obj\Debug\netstandard2.1\CleanArchitecture.Persistence.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\C1-Student04\Desktop\FirstCleanArchitecture\CleanArchitecture.Persistence\obj\Debug\netstandard2.1\CleanArchitecture.Persistence.AssemblyInfoInputs.cache
+C:\Users\C1-Student04\Desktop\FirstCleanArchitecture\CleanArchitecture.Persistence\obj\Debug\netstandard2.1\CleanArchitecture.Persistence.AssemblyInfo.cs
+C:\Users\C1-Student04\Desktop\FirstCleanArchitecture\CleanArchitecture.Persistence\obj\Debug\netstandard2.1\CleanArchitecture.Persistence.csproj.CoreCompileInputs.cache
+C:\Users\C1-Student04\Desktop\FirstCleanArchitecture\CleanArchitecture.Persistence\obj\Debug\netstandard2.1\CleanArchitecture.Persistence.csproj.CopyComplete
+C:\Users\C1-Student04\Desktop\FirstCleanArchitecture\CleanArchitecture.Persistence\obj\Debug\netstandard2.1\CleanArchitecture.Persistence.dll
+C:\Users\C1-Student04\Desktop\FirstCleanArchitecture\CleanArchitecture.Persistence\obj\Debug\netstandard2.1\CleanArchitecture.Persistence.pdb

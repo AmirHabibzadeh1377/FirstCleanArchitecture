@@ -45,6 +45,7 @@ namespace CleanArichitecture.Application.Features.Handlers.Weblog.Commands
             }
 
             #endregion
+
             var weblogMapper = _mapper.Map<CleanArchitecture.Domain.Entities.Weblog.Weblog>(request.CreateWeblogDTOs);
             var weblog = await _weblogRepo.Add(weblogMapper);
             return weblog.ID;

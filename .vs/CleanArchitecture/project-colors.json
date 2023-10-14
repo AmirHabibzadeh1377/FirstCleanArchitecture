@@ -35,7 +35,12 @@
       "ProjectGuid": "57e832e5-5a90-4657-b4ae-200cfb839220",
       "DisplayName": "CleanArchitecture.Application.Test",
       "ColorIndex": 5
+    },
+    "c89e3a94-8365-4f93-a78b-aa3b7908c704": {
+      "ProjectGuid": "c89e3a94-8365-4f93-a78b-aa3b7908c704",
+      "DisplayName": "CleanArchitecture.MVC",
+      "ColorIndex": 6
     }
   },
-  "NextColorIndex": 6
+  "NextColorIndex": 7
 }

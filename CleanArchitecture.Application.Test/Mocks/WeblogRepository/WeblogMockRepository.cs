@@ -1,11 +1,7 @@
 ﻿using CleanArchitecture.Domain.Entities.Weblog;
 using CleanArichitecture.Application.Persistance.ServiceContract;
 using Moq;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace CleanArchitecture.Application.Test.Mocks.WeblogRepository
 {
