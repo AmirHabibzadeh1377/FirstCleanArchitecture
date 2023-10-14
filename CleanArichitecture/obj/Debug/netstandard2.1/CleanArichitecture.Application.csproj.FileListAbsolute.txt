@@ -10,3 +10,16 @@ C:\Users\C1-Student04\source\repos\CleanArchitecture\CleanArichitecture\bin\Debu
 C:\Users\C1-Student04\source\repos\CleanArchitecture\CleanArichitecture\obj\Debug\netstandard2.1\CleanArichitecture.Application.csproj.CopyComplete
 C:\Users\C1-Student04\source\repos\CleanArchitecture\CleanArichitecture\obj\Debug\netstandard2.1\CleanArichitecture.Application.dll
 C:\Users\C1-Student04\source\repos\CleanArchitecture\CleanArichitecture\obj\Debug\netstandard2.1\CleanArichitecture.Application.pdb
+C:\Users\Student\Desktop\New folder\FirstCleanArchitecture\CleanArichitecture\bin\Debug\netstandard2.1\CleanArichitecture.Application.deps.json
+C:\Users\Student\Desktop\New folder\FirstCleanArchitecture\CleanArichitecture\bin\Debug\netstandard2.1\CleanArichitecture.Application.dll
+C:\Users\Student\Desktop\New folder\FirstCleanArchitecture\CleanArichitecture\bin\Debug\netstandard2.1\CleanArichitecture.Application.pdb
+C:\Users\Student\Desktop\New folder\FirstCleanArchitecture\CleanArichitecture\bin\Debug\netstandard2.1\CleanArchitecture.Domain.dll
+C:\Users\Student\Desktop\New folder\FirstCleanArchitecture\CleanArichitecture\bin\Debug\netstandard2.1\CleanArchitecture.Domain.pdb
+C:\Users\Student\Desktop\New folder\FirstCleanArchitecture\CleanArichitecture\obj\Debug\netstandard2.1\CleanArichitecture.Application.csproj.AssemblyReference.cache
+C:\Users\Student\Desktop\New folder\FirstCleanArchitecture\CleanArichitecture\obj\Debug\netstandard2.1\CleanArichitecture.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Student\Desktop\New folder\FirstCleanArchitecture\CleanArichitecture\obj\Debug\netstandard2.1\CleanArichitecture.Application.AssemblyInfoInputs.cache
+C:\Users\Student\Desktop\New folder\FirstCleanArchitecture\CleanArichitecture\obj\Debug\netstandard2.1\CleanArichitecture.Application.AssemblyInfo.cs
+C:\Users\Student\Desktop\New folder\FirstCleanArchitecture\CleanArichitecture\obj\Debug\netstandard2.1\CleanArichitecture.Application.csproj.CoreCompileInputs.cache
+C:\Users\Student\Desktop\New folder\FirstCleanArchitecture\CleanArichitecture\obj\Debug\netstandard2.1\CleanArichitecture.Application.csproj.CopyComplete
+C:\Users\Student\Desktop\New folder\FirstCleanArchitecture\CleanArichitecture\obj\Debug\netstandard2.1\CleanArichitecture.Application.dll
+C:\Users\Student\Desktop\New folder\FirstCleanArchitecture\CleanArichitecture\obj\Debug\netstandard2.1\CleanArichitecture.Application.pdb

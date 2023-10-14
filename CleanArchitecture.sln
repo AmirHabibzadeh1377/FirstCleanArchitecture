@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.31402.337
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.32014.148
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{0FE3E76E-9728-41E5-99C0-8C15847D91AA}"
 EndProject
@@ -23,7 +23,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CleanArchitecture.Infrastru
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CleanArchitecture.Persistence", "CleanArchitecture.Persistence\CleanArchitecture.Persistence.csproj", "{E9C2884B-623B-45BC-8421-DDC3703FB5BE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClearnArchitecture.Api", "ClearnArchitecture.Api\ClearnArchitecture.Api.csproj", "{E16A70F1-EE21-4C9F-97BA-77D55AFA40D5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ClearnArchitecture.Api", "ClearnArchitecture.Api\ClearnArchitecture.Api.csproj", "{E16A70F1-EE21-4C9F-97BA-77D55AFA40D5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CleanArchitecture.Application.Test", "CleanArchitecture.Application.Test\CleanArchitecture.Application.Test.csproj", "{57E832E5-5A90-4657-B4AE-200CFB839220}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,6 +53,10 @@ Global
 		{E16A70F1-EE21-4C9F-97BA-77D55AFA40D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E16A70F1-EE21-4C9F-97BA-77D55AFA40D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E16A70F1-EE21-4C9F-97BA-77D55AFA40D5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{57E832E5-5A90-4657-B4AE-200CFB839220}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{57E832E5-5A90-4657-B4AE-200CFB839220}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{57E832E5-5A90-4657-B4AE-200CFB839220}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{57E832E5-5A90-4657-B4AE-200CFB839220}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -65,6 +71,7 @@ Global
 		{B4B083CD-AC35-40E8-9F7D-6D86563F54E8} = {AFE2C365-5306-4348-90CB-907A2F89E0D4}
 		{E9C2884B-623B-45BC-8421-DDC3703FB5BE} = {AFE2C365-5306-4348-90CB-907A2F89E0D4}
 		{E16A70F1-EE21-4C9F-97BA-77D55AFA40D5} = {0F288A91-7F52-4532-8047-A834CA924A7E}
+		{57E832E5-5A90-4657-B4AE-200CFB839220} = {6BA54D8C-1A5C-49CE-8C81-058D22D8274A}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {8A769FBD-F31A-4D54-97B3-E53E6CE0BE5F}

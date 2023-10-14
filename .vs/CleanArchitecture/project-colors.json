@@ -1,0 +1,41 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "b8c3c5ea-f5c6-4aef-a853-fd0c82cc2124": {
+      "ProjectGuid": "b8c3c5ea-f5c6-4aef-a853-fd0c82cc2124",
+      "DisplayName": "CleanArichitecture.Application",
+      "ColorIndex": 0
+    },
+    "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3": {
+      "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
+      "DisplayName": "Miscellaneous Files",
+      "ColorIndex": -1
+    },
+    "e9c2884b-623b-45bc-8421-ddc3703fb5be": {
+      "ProjectGuid": "e9c2884b-623b-45bc-8421-ddc3703fb5be",
+      "DisplayName": "CleanArchitecture.Persistence",
+      "ColorIndex": 1
+    },
+    "e16a70f1-ee21-4c9f-97ba-77d55afa40d5": {
+      "ProjectGuid": "e16a70f1-ee21-4c9f-97ba-77d55afa40d5",
+      "DisplayName": "ClearnArchitecture.Api",
+      "ColorIndex": 2
+    },
+    "b4b083cd-ac35-40e8-9f7d-6d86563f54e8": {
+      "ProjectGuid": "b4b083cd-ac35-40e8-9f7d-6d86563f54e8",
+      "DisplayName": "CleanArchitecture.Infrastructure",
+      "ColorIndex": 3
+    },
+    "f2519770-0406-4d3d-a9e0-35d3e70129d2": {
+      "ProjectGuid": "f2519770-0406-4d3d-a9e0-35d3e70129d2",
+      "DisplayName": "CleanArchitecture.Domain",
+      "ColorIndex": 4
+    },
+    "57e832e5-5a90-4657-b4ae-200cfb839220": {
+      "ProjectGuid": "57e832e5-5a90-4657-b4ae-200cfb839220",
+      "DisplayName": "CleanArchitecture.Application.Test",
+      "ColorIndex": 5
+    }
+  },
+  "NextColorIndex": 6
+}

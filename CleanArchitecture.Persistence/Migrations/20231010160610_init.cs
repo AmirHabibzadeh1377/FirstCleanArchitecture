@@ -2,7 +2,7 @@
 
 namespace CleanArchitecture.Persistence.Migrations
 {
-    public partial class initialmigration : Migration
+    public partial class init : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
