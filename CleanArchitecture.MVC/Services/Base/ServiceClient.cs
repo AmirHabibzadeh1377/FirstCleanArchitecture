@@ -40,75 +40,7 @@ namespace CleanArchitecture.MVC.Services.Base
 
         #endregion
 
-        public Task CreateWeblogDTO()
-        {
-            throw new NotImplementedException();
-        }
-
-        public Task DeleteWeblog(int id)
-        {
-            throw new NotImplementedException();
-        }
-
-        public Task<WeblogListDTOs> GetWeblogById(int id)
-        {
-            throw new NotImplementedException();
-        }
-
-        public async Task<ICollection<WeblogListDTOs>> GetWeblogDTO()
-        {
-            var urlBilder = new StringBuilder();
-            urlBilder.Append(BaseUrl != null ? BaseUrl.TrimEnd('/') : string.Empty);
-            var client = _httpClient;
-            var request = new HttpRequestMessage();
-            request.Method = HttpMethod.Get;
-            request.Headers.Accept.Add(MediaTypeWithQualityHeaderValue.Parse("text/plain"));
-            PrepareRequest(client, request, urlBilder);
-            var url = urlBilder.ToString();
-            request.RequestUri = new Uri(url);
-            PrepareRequest(client, request, url);
-            var response = await client.SendAsync(request, HttpCompletionOption.ResponseHeadersRead, CancellationToken.None).ConfigureAwait(false);
-            var disposeResponse = true;
-            try
-            {
-                var headers = Enumerable.ToDictionary(response.Headers, h => h.Key, h => h.Value);
-                if (response.Content != null && response.Headers != null)
-                {
-                    foreach (var header in response.Content.Headers)
-                    {
-                        headers[header.Key] = header.Value;
-                    }
-                }
-
-                ProcessResponse(client, response);
-                var statusCode = (int)response.StatusCode;
-                if (statusCode == 200)
-                {
-                    var objectResponse = await ReadObjectReponseAsync<ICollection<WeblogListDTOs>>(response, headers, CancellationToken.None).ConfigureAwait(false);
-                    if(objectResponse.Object == null)
-                    {
-                        throw new ApiException("Response was null which was not expected.", statusCode, objectResponse.Text, headers, null);
-                    }
-                    return objectResponse.Object;
-                }
-                else
-                {
-                    var responseData = response.Content == null ? null : await response.Content.ReadAsStringAsync().ConfigureAwait(false);
-                    throw new ApiException("The HTTP status code of the response was not expected (" + statusCode + ").", statusCode, responseData, headers, null);
-                }
-
-            }
-
-            finally
-            {
-                if (disposeResponse)
-                {
-                    client.Dispose();
-                }
-            }
-        }
-
-        public async Task UpdateWeblog(UpdateWeblogDTOs model)
+        public async Task CreateWeblogDTO(CreateWeblogDTOs model)
         {
             var urlBuilder = new StringBuilder();
             urlBuilder.Append(BaseUrl != null ? BaseUrl.Trim('/') : "").Append("this place for api adderess in api layer");
@@ -127,7 +59,7 @@ namespace CleanArchitecture.MVC.Services.Base
                     var url = urlBuilder.ToString();
                     request.RequestUri = new Uri(url);
                     PrepareRequest(client, request, url);
-                    var response = await client.SendAsync(request,HttpCompletionOption.ResponseContentRead,CancellationToken.None).ConfigureAwait(false);
+                    var response = await client.SendAsync(request, HttpCompletionOption.ResponseContentRead, CancellationToken.None).ConfigureAwait(false);
                     disposeClient = true;
                     try
                     {
@@ -163,6 +95,256 @@ namespace CleanArchitecture.MVC.Services.Base
             finally
             {
                 client.Dispose();
+            }
+        }
+
+        public async Task DeleteWeblog(int id)
+        {
+            if (id == null)
+            {
+                throw new ArgumentNullException("id");
+            }
+
+            var urlBuilder = new StringBuilder();
+            urlBuilder.Append(BaseUrl != null ? BaseUrl.Trim('/') : "").Append("this is for api controller address ");
+            urlBuilder.Replace("{id}", Uri.EscapeDataString(ConvertToString(id, CultureInfo.InvariantCulture)));
+
+            var client = _httpClient;
+            var disposeClient = false;
+            try
+            {
+                using (var request = new HttpRequestMessage())
+                {
+                    request.Method = HttpMethod.Delete;
+                    PrepareRequest(client, request, urlBuilder);
+
+                    var url = urlBuilder.ToString();
+                    request.RequestUri = new Uri(url);
+
+                    PrepareRequest(client, request, url);
+
+                    var response = await client.SendAsync(request, HttpCompletionOption.ResponseHeadersRead, CancellationToken.None);
+                    disposeClient = true;
+                    try
+                    {
+                        var headers = Enumerable.ToDictionary(response.Headers, h => h.Key, h => h.Value);
+                        if (response.Content != null && response.Headers != null)
+                        {
+                            foreach (var header in response.Headers)
+                                headers[header.Key] = header.Value;
+                        }
+
+                        ProcessResponse(client, response);
+                        var statusCode = (int)response.StatusCode;
+                        if (statusCode == 200)
+                        {
+                            return;
+                        }
+                        else
+                        {
+                            var responseData = response.Content == null ? null : await response.Content.ReadAsStringAsync().ConfigureAwait(false);
+                            throw new ApiException("The HTTP status code of the response was not expected (" + statusCode + ").", statusCode, responseData, headers, null);
+                        }
+                    }
+                    finally
+                    {
+                        if (disposeClient)
+                            client.Dispose();
+                    }
+                }
+            }
+            finally
+            {
+                if (disposeClient)
+                    client.Dispose();
+            }
+        }
+
+        public async Task<WeblogListDTOs> GetWeblogById(int id)
+        {
+            if (id == 0 || id == null)
+                throw new ArgumentNullException("id");
+
+            var urlBuilder = new StringBuilder();
+            urlBuilder.Append(BaseUrl != null ? BaseUrl.TrimEnd('/') : "").Append("this is for api controlle placd");
+            urlBuilder.Replace("{id}", Uri.EscapeDataString(ConvertToString(id, CultureInfo.InvariantCulture)));
+            var client = _httpClient;
+            var disposeClient = false;
+            try
+            {
+                using (var request = new HttpRequestMessage())
+                {
+                    request.Method = HttpMethod.Get;
+                    request.Headers.Accept.Add(MediaTypeWithQualityHeaderValue.Parse("application/json"));
+
+                    PrepareRequest(client, request, urlBuilder);
+
+                    var url = urlBuilder.ToString();
+                    request.RequestUri = new Uri(url);
+
+                    PrepareRequest(client, request, url);
+                    var response = await client.SendAsync(request, HttpCompletionOption.ResponseHeadersRead, CancellationToken.None);
+                    disposeClient = true;
+                    try
+                    {
+                        var headers = Enumerable.ToDictionary(response.Headers, h => h.Key, h => h.Value);
+                        if (response.Content != null && response.Headers != null)
+                        {
+                            foreach (var header in response.Headers)
+                                headers[header.Key] = header.Value;
+                        }
+
+                        ProcessResponse(client, response);
+
+                        var statusCode = (int)response.StatusCode;
+
+                        if (statusCode == 200)
+                        {
+                            var objectResponse = await ReadObjectReponseAsync<WeblogListDTOs>(response, headers, CancellationToken.None).ConfigureAwait(false);
+                            if (objectResponse.Object == null)
+                            {
+                                throw new ApiException("Response was null which was not expected.", statusCode, objectResponse.Text, headers, null);
+                            }
+
+                            return objectResponse.Object;
+                        }
+                        else
+                        {
+                            var responseData_ = response.Content == null ? null : await response.Content.ReadAsStringAsync().ConfigureAwait(false);
+                            throw new ApiException("The HTTP status code of the response was not expected (" + statusCode + ").", statusCode, responseData_, headers, null);
+                        }
+                    }
+                    finally
+                    {
+
+                        if (disposeClient)
+                        {
+                            client.Dispose();
+                        }
+                    }
+                }
+            }
+            finally
+            {
+                if (disposeClient)
+                {
+                    client.Dispose();
+                }
+            }
+        }
+
+        public async Task<ICollection<WeblogListDTOs>> GetWeblogDTO()
+        {
+            var urlBilder = new StringBuilder();
+            urlBilder.Append(BaseUrl != null ? BaseUrl.TrimEnd('/') : string.Empty);
+            var client = _httpClient;
+            var request = new HttpRequestMessage();
+            request.Method = HttpMethod.Get;
+            request.Headers.Accept.Add(MediaTypeWithQualityHeaderValue.Parse("text/plain"));
+            PrepareRequest(client, request, urlBilder);
+            var url = urlBilder.ToString();
+            request.RequestUri = new Uri(url);
+            PrepareRequest(client, request, url);
+            var response = await client.SendAsync(request, HttpCompletionOption.ResponseHeadersRead, CancellationToken.None).ConfigureAwait(false);
+            var disposeResponse = true;
+            try
+            {
+                var headers = Enumerable.ToDictionary(response.Headers, h => h.Key, h => h.Value);
+                if (response.Content != null && response.Headers != null)
+                {
+                    foreach (var header in response.Content.Headers)
+                    {
+                        headers[header.Key] = header.Value;
+                    }
+                }
+
+                ProcessResponse(client, response);
+                var statusCode = (int)response.StatusCode;
+                if (statusCode == 200)
+                {
+                    var objectResponse = await ReadObjectReponseAsync<ICollection<WeblogListDTOs>>(response, headers, CancellationToken.None).ConfigureAwait(false);
+                    if (objectResponse.Object == null)
+                    {
+                        throw new ApiException("Response was null which was not expected.", statusCode, objectResponse.Text, headers, null);
+                    }
+                    return objectResponse.Object;
+                }
+                else
+                {
+                    var responseData = response.Content == null ? null : await response.Content.ReadAsStringAsync().ConfigureAwait(false);
+                    throw new ApiException("The HTTP status code of the response was not expected (" + statusCode + ").", statusCode, responseData, headers, null);
+                }
+
+            }
+
+            finally
+            {
+                if (disposeResponse)
+                {
+                    client.Dispose();
+                }
+            }
+        }
+
+        public async Task UpdateWeblog(UpdateWeblogDTOs model)
+        {
+            if (model.ID == null)
+                throw new ArgumentNullException("id");
+
+            var urlBuilder = new StringBuilder();
+            urlBuilder.Append(BaseUrl != null ? BaseUrl.Trim('/') : "").Append("this is for api address");
+            urlBuilder.Replace("{id}", Uri.EscapeDataString(ConvertToString(model.ID, CultureInfo.InvariantCulture)));
+            var client = _httpClient;
+            var disposeClient = false;
+            try
+            {
+                using (var request = new HttpRequestMessage())
+                {
+                    var json = JsonConvert.SerializeObject(model, _jsonSetting.Value);
+                    var content = new StringContent(json, Encoding.UTF8);
+                    content.Headers.ContentType = new MediaTypeHeaderValue("application/json");
+                    request.Content = content;
+                    request.Method = HttpMethod.Put;
+                    PrepareRequest(client, request, urlBuilder);
+
+                    var url = urlBuilder.ToString();
+                    request.RequestUri = new Uri(url);
+
+                    PrepareRequest(client, request, url);
+
+                    var response = await client.SendAsync(request,HttpCompletionOption.ResponseHeadersRead,CancellationToken.None);
+                    disposeClient = true;
+                    try
+                    {
+                        var headers = Enumerable.ToDictionary(response.Headers, h => h.Key, h => h.Value);
+                        if(response.Content != null && response.Content != null)
+                        {
+                            foreach (var header in response.Headers)
+                                headers[header.Key] = header.Value;
+                        }
+
+                        ProcessResponse(client, response);
+
+                        var statusCode = (int)response.StatusCode;
+                        if (statusCode == 200)
+                            return;
+                        else
+                        {
+                            var responseData = response.Content == null ? null :await response.Content.ReadAsStringAsync().ConfigureAwait(false);
+                            throw new ApiException("The HTTP status code of the response was not expected (" + statusCode + ").", statusCode, responseData, headers, null);
+                        }
+                    }
+                    finally
+                    {
+                        if (disposeClient)
+                            client.Dispose();
+                    }
+                }
+            }
+            finally
+            {
+                if (disposeClient)
+                    client.Dispose();
             }
         }
 

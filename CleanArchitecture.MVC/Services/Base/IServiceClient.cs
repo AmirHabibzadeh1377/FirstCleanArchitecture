@@ -5,7 +5,7 @@ namespace CleanArchitecture.MVC.Services.Base
     public partial interface IClient
     {
         Task<ICollection<WeblogListDTOs>> GetWeblogDTOd();
-        Task CreateWeblogDTO();
+        Task CreateWeblogDTO(CreateWeblogDTOs model);
         Task UpdateWeblog(UpdateWeblogDTOs model);
         Task<WeblogListDTOs> GetWeblogById(int id);
         Task DeleteWeblog(int id);
