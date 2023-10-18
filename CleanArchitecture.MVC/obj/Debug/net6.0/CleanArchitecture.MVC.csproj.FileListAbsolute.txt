@@ -6,3 +6,12 @@ C:\Users\C1-Student04\Desktop\FirstCleanArchitecture\CleanArchitecture.MVC\obj\D
 C:\Users\C1-Student04\Desktop\FirstCleanArchitecture\CleanArchitecture.MVC\obj\Debug\net6.0\CleanArchitecture.MVC.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\C1-Student04\Desktop\FirstCleanArchitecture\CleanArchitecture.MVC\obj\Debug\net6.0\CleanArchitecture.MVC.RazorAssemblyInfo.cache
 C:\Users\C1-Student04\Desktop\FirstCleanArchitecture\CleanArchitecture.MVC\obj\Debug\net6.0\CleanArchitecture.MVC.RazorAssemblyInfo.cs
+C:\Users\Student\Desktop\New folder\FirstCleanArchitecture\CleanArchitecture.MVC\obj\Debug\net6.0\CleanArchitecture.MVC.csproj.AssemblyReference.cache
+C:\Users\Student\Desktop\New folder\FirstCleanArchitecture\CleanArchitecture.MVC\obj\Debug\net6.0\CleanArchitecture.MVC.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Student\Desktop\New folder\FirstCleanArchitecture\CleanArchitecture.MVC\obj\Debug\net6.0\CleanArchitecture.MVC.AssemblyInfoInputs.cache
+C:\Users\Student\Desktop\New folder\FirstCleanArchitecture\CleanArchitecture.MVC\obj\Debug\net6.0\CleanArchitecture.MVC.AssemblyInfo.cs
+C:\Users\Student\Desktop\New folder\FirstCleanArchitecture\CleanArchitecture.MVC\obj\Debug\net6.0\CleanArchitecture.MVC.csproj.CoreCompileInputs.cache
+C:\Users\Student\Desktop\New folder\FirstCleanArchitecture\CleanArchitecture.MVC\obj\Debug\net6.0\CleanArchitecture.MVC.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\Student\Desktop\New folder\FirstCleanArchitecture\CleanArchitecture.MVC\obj\Debug\net6.0\CleanArchitecture.MVC.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Student\Desktop\New folder\FirstCleanArchitecture\CleanArchitecture.MVC\obj\Debug\net6.0\CleanArchitecture.MVC.RazorAssemblyInfo.cache
+C:\Users\Student\Desktop\New folder\FirstCleanArchitecture\CleanArchitecture.MVC\obj\Debug\net6.0\CleanArchitecture.MVC.RazorAssemblyInfo.cs

@@ -4,13 +4,15 @@ using CleanArichitecture.Application.DTOs.Weblog.Validators;
 using CleanArichitecture.Application.Exeptions;
 using CleanArichitecture.Application.Features.Requests.Weblog.Commands;
 using CleanArichitecture.Application.Persistance.ServiceContract;
+using CleanArichitecture.Application.Responses;
 using MediatR;
+using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 
 namespace CleanArichitecture.Application.Features.Handlers.Weblog.Commands
 {
-    public class CreateWeblogHandler : IRequestHandler<CreateWeblogRequest, int>
+    public class CreateWeblogHandler : IRequestHandler<CreateWeblogRequest, BaseCommandResponse>
     {
         #region Fields
 
@@ -33,22 +35,29 @@ namespace CleanArichitecture.Application.Features.Handlers.Weblog.Commands
 
         #region Handler
 
-        public async Task<int> Handle(CreateWeblogRequest request, CancellationToken cancellationToken)
+        public async Task<BaseCommandResponse> Handle(CreateWeblogRequest request, CancellationToken cancellationToken)
         {
-            #region Validation
+            var response = new BaseCommandResponse();
+
 
             var validation = new CreateWeblogDTOValidator(_weblogCategoryRepo);
-            var validationResult =await validation.ValidateAsync(request.CreateWeblogDTOs);
+            var validationResult = await validation.ValidateAsync(request.CreateWeblogDTOs);
             if (!validationResult.IsValid)
             {
-                throw new ValidationException(validationResult);
+                response.Message = "Creation Faild";
+                response.Success = false;
+                response.Errors = validationResult.Errors.Select(e => e.ErrorMessage).ToList();
+            }
+            else
+            {
+                var weblogMapper = _mapper.Map<CleanArchitecture.Domain.Entities.Weblog.Weblog>(request.CreateWeblogDTOs);
+                var weblog = await _weblogRepo.Add(weblogMapper);
+                response.Message = "Weblog Creation Success";
+                response.Success = true;
+                response.Id = weblog.ID;
             }
 
-            #endregion
-
-            var weblogMapper = _mapper.Map<CleanArchitecture.Domain.Entities.Weblog.Weblog>(request.CreateWeblogDTOs);
-            var weblog = await _weblogRepo.Add(weblogMapper);
-            return weblog.ID;
+            return response;
         }
 
         #endregion

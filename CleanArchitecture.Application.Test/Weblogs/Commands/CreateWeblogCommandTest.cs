@@ -6,6 +6,7 @@ using CleanArichitecture.Application.Features.Handlers.Weblog.Commands;
 using CleanArichitecture.Application.Features.Requests.Weblog.Commands;
 using CleanArichitecture.Application.Persistance.ServiceContract;
 using CleanArichitecture.Application.Profiles;
+using CleanArichitecture.Application.Responses;
 using Moq;
 using Shouldly;
 using System.Threading;
@@ -54,7 +55,7 @@ namespace CleanArchitecture.Application.Test.Weblogs.Commands
             var handler = new CreateWeblogHandler(_mapper,_mockRepo.Object,_mockCategoryRepository.Object);
             var result =await handler.Handle(new CreateWeblogRequest { CreateWeblogDTOs = _createWeblogDto}, CancellationToken.None);
 
-            result.ShouldBeOfType<int>();
+            result.ShouldBeOfType<BaseCommandResponse>();
 
         } 
     }

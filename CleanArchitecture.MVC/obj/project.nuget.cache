@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "LUtFBgWshbZNtc16smxqBa0UdFhCAEPDQ8OWm8AuCx7FlAyTPQDAQe0DU1OfArOLYNMc8W+OiMsTuzAu+OswNA==",
+  "dgSpecHash": "f+IiCoNLwSavCUDA5Lt0c5e0GgCHsqWIIbV4bJODVMdEE6zRF96VKwRDWcQhTKNHU2H86Dmf46HQYNntcMFMZw==",
   "success": true,
   "projectFilePath": "C:\\Users\\Student\\Desktop\\New folder\\FirstCleanArchitecture\\CleanArchitecture.MVC\\CleanArchitecture.MVC.csproj",
   "expectedPackageFiles": [
@@ -10,6 +10,7 @@
     "C:\\Users\\Student\\.nuget\\packages\\enums.net\\4.0.1\\enums.net.4.0.1.nupkg.sha512",
     "C:\\Users\\Student\\.nuget\\packages\\fluentvalidation\\11.7.1\\fluentvalidation.11.7.1.nupkg.sha512",
     "C:\\Users\\Student\\.nuget\\packages\\fluentvalidation.dependencyinjectionextensions\\11.7.1\\fluentvalidation.dependencyinjectionextensions.11.7.1.nupkg.sha512",
+    "C:\\Users\\Student\\.nuget\\packages\\localstorage\\2.1.0\\localstorage.2.1.0.nupkg.sha512",
     "C:\\Users\\Student\\.nuget\\packages\\mathnet.numerics.signed\\4.15.0\\mathnet.numerics.signed.4.15.0.nupkg.sha512",
     "C:\\Users\\Student\\.nuget\\packages\\mediatr\\12.1.1\\mediatr.12.1.1.nupkg.sha512",
     "C:\\Users\\Student\\.nuget\\packages\\mediatr.contracts\\2.0.1\\mediatr.contracts.2.0.1.nupkg.sha512",

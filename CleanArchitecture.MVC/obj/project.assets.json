@@ -67,6 +67,18 @@
           "lib/netstandard2.1/FluentValidation.DependencyInjectionExtensions.dll": {}
         }
       },
+      "LocalStorage/2.1.0": {
+        "type": "package",
+        "dependencies": {
+          "Newtonsoft.Json": "12.0.3"
+        },
+        "compile": {
+          "lib/netstandard2.0/LocalStorage.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/LocalStorage.dll": {}
+        }
+      },
       "MathNet.Numerics.Signed/4.15.0": {
         "type": "package",
         "compile": {
@@ -3106,6 +3118,18 @@
         "lib/netstandard2.0/FluentValidation.DependencyInjectionExtensions.xml",
         "lib/netstandard2.1/FluentValidation.DependencyInjectionExtensions.dll",
         "lib/netstandard2.1/FluentValidation.DependencyInjectionExtensions.xml"
+      ]
+    },
+    "LocalStorage/2.1.0": {
+      "sha512": "2FYxEN8aQT6TxzsSsD86XLPglqEPqhdBpBzmcr9BhPgcA7gXjaVXUSaPM1FB9dI70j3XRAA4Kjpl0QaPxK1IkQ==",
+      "type": "package",
+      "path": "localstorage/2.1.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netstandard2.0/LocalStorage.dll",
+        "localstorage.2.1.0.nupkg.sha512",
+        "localstorage.nuspec"
       ]
     },
     "MathNet.Numerics.Signed/4.15.0": {
@@ -9215,6 +9239,7 @@
       "AutoMapper.Extensions.Microsoft.DependencyInjection >= 12.0.1",
       "CleanArichitecture.Application >= 1.0.0",
       "ClearnArchitecture.Api >= 1.0.0",
+      "LocalStorage >= 2.1.0",
       "NPOI >= 2.6.2",
       "Newtonsoft.Json >= 13.0.3"
     ]
@@ -9272,6 +9297,10 @@
           "AutoMapper.Extensions.Microsoft.DependencyInjection": {
             "target": "Package",
             "version": "[12.0.1, )"
+          },
+          "LocalStorage": {
+            "target": "Package",
+            "version": "[2.1.0, )"
           },
           "NPOI": {
             "target": "Package",

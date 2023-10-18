@@ -3,14 +3,16 @@ using CleanArichitecture.Application.DTOs.Weblog.Validators;
 using CleanArichitecture.Application.Exeptions;
 using CleanArichitecture.Application.Features.Requests.Weblog.Commands;
 using CleanArichitecture.Application.Persistance.ServiceContract;
+using CleanArichitecture.Application.Responses;
 using MediatR;
 using System;
+using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 
 namespace CleanArichitecture.Application.Features.Handlers.Weblog.Commands
 {
-    public class UpdateWeblogHandler : IRequestHandler<UpdateWeblogRequest, Unit>
+    public class UpdateWeblogHandler : IRequestHandler<UpdateWeblogRequest, BaseCommandResponse>
     {
         #region Fields
 
@@ -32,23 +34,28 @@ namespace CleanArichitecture.Application.Features.Handlers.Weblog.Commands
 
         #region Handler
 
-        public async Task<Unit> Handle(UpdateWeblogRequest request, CancellationToken cancellationToken)
+        public async Task<BaseCommandResponse> Handle(UpdateWeblogRequest request, CancellationToken cancellationToken)
         {
-            #region Validation
-
+            var response = new BaseCommandResponse();
             var validator = new UpdateWeblogDTOValidator(_weblogCategoryRepo);
             var validationResult = await validator.ValidateAsync(request.UpdateWeblogDTOs);
             if (!validationResult.IsValid)
             {
-                throw new ValidationException(validationResult);
+                response.Message = "Weblog Update Failds";
+                response.Success = false;
+                response.Errors = validationResult.Errors.Select(e => e.ErrorMessage).ToList();
+            }
+            else
+            {
+                var weblog = await _weblogRepo.GetById(request.UpdateWeblogDTOs.ID);
+                _mapper.Map(request.UpdateWeblogDTOs, weblog);
+                await _weblogRepo.Update(weblog);
+                response.Success = true;
+                response.Message = "Weblog Update Succes";
+                response.Id = weblog.ID;
             }
 
-            #endregion
-
-            var weblog = await _weblogRepo.GetById(request.UpdateWeblogDTOs.ID);
-            _mapper.Map(request.UpdateWeblogDTOs, weblog);
-            await _weblogRepo.Update(weblog);
-            return Unit.Value;
+            return response;
         }
 
         #endregion

@@ -1,4 +1,7 @@
+using CleanArchitecture.MVC.Contract;
+using CleanArchitecture.MVC.Services;
 using CleanArchitecture.MVC.Services.Base;
+using System.Reflection;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -9,7 +12,8 @@ builder.Services.AddHttpClient<IClient,Client>(c =>
 {
     c.BaseAddress = new Uri(apiBaseAddress);
 });
-
+builder.Services.AddAutoMapper(Assembly.GetExecutingAssembly());
+builder.Services.AddSingleton<ILocalStorageServiceContract, LocalStorageServiceRepository>();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

@@ -43,7 +43,7 @@ namespace CleanArchitecture.MVC.Services.Base
         public async Task CreateWeblogDTO(CreateWeblogDTOs model)
         {
             var urlBuilder = new StringBuilder();
-            urlBuilder.Append(BaseUrl != null ? BaseUrl.Trim('/') : "").Append("this place for api adderess in api layer");
+            urlBuilder.Append(BaseUrl != null ? BaseUrl.Trim('/') : "").Append("api/Weblog/Post");
             var client = _httpClient;
             var disposeClient = false;
             try
@@ -100,13 +100,13 @@ namespace CleanArchitecture.MVC.Services.Base
 
         public async Task DeleteWeblog(int id)
         {
-            if (id == null)
+            if (id == 0)
             {
                 throw new ArgumentNullException("id");
             }
 
             var urlBuilder = new StringBuilder();
-            urlBuilder.Append(BaseUrl != null ? BaseUrl.Trim('/') : "").Append("this is for api controller address ");
+            urlBuilder.Append(BaseUrl != null ? BaseUrl.Trim('/') : "").Append("api/Weblog/Delete");
             urlBuilder.Replace("{id}", Uri.EscapeDataString(ConvertToString(id, CultureInfo.InvariantCulture)));
 
             var client = _httpClient;
@@ -166,7 +166,7 @@ namespace CleanArchitecture.MVC.Services.Base
                 throw new ArgumentNullException("id");
 
             var urlBuilder = new StringBuilder();
-            urlBuilder.Append(BaseUrl != null ? BaseUrl.TrimEnd('/') : "").Append("this is for api controlle placd");
+            urlBuilder.Append(BaseUrl != null ? BaseUrl.TrimEnd('/') : "").Append("api/Weblog/");
             urlBuilder.Replace("{id}", Uri.EscapeDataString(ConvertToString(id, CultureInfo.InvariantCulture)));
             var client = _httpClient;
             var disposeClient = false;
@@ -236,7 +236,7 @@ namespace CleanArchitecture.MVC.Services.Base
         public async Task<ICollection<WeblogListDTOs>> GetWeblogDTO()
         {
             var urlBilder = new StringBuilder();
-            urlBilder.Append(BaseUrl != null ? BaseUrl.TrimEnd('/') : string.Empty);
+            urlBilder.Append(BaseUrl != null ? BaseUrl.TrimEnd('/') : string.Empty).Append("api/Weblog");
             var client = _httpClient;
             var request = new HttpRequestMessage();
             request.Method = HttpMethod.Get;
