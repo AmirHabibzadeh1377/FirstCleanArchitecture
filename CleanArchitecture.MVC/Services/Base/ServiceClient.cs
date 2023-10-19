@@ -1,5 +1,7 @@
-﻿using CleanArichitecture.Application.DTOs.Weblog;
+﻿using CleanArchitecture.MVC.Model;
+using CleanArichitecture.Application.DTOs.Weblog;
 using CleanArichitecture.Application.Exeptions;
+using CleanArichitecture.Application.Responses;
 using Newtonsoft.Json;
 using System.Globalization;
 using System.Net.Http.Headers;
@@ -40,7 +42,7 @@ namespace CleanArchitecture.MVC.Services.Base
 
         #endregion
 
-        public async Task CreateWeblogDTO(CreateWeblogDTOs model)
+        public async Task<BaseCommandResponse> CreateWeblogDTO(CreateWeblogDTOs model)
         {
             var urlBuilder = new StringBuilder();
             urlBuilder.Append(BaseUrl != null ? BaseUrl.Trim('/') : "").Append("api/Weblog/Post");
@@ -75,7 +77,13 @@ namespace CleanArchitecture.MVC.Services.Base
                         var statusCode = (int)response.StatusCode;
                         if (statusCode == 200)
                         {
-                            return;
+                            var objectResponse = await ReadObjectReponseAsync<BaseCommandResponse>(response, headers, CancellationToken.None).ConfigureAwait(false);
+                            if (objectResponse.Object == null)
+                            {
+                                throw new ApiException("", statusCode, objectResponse.Text, headers, null);
+                            }
+
+                            return objectResponse.Object;
                         }
                         else
                         {
@@ -98,7 +106,7 @@ namespace CleanArchitecture.MVC.Services.Base
             }
         }
 
-        public async Task DeleteWeblog(int id)
+        public async Task<BaseCommandResponse> DeleteWeblog(int id)
         {
             if (id == 0)
             {
@@ -138,7 +146,13 @@ namespace CleanArchitecture.MVC.Services.Base
                         var statusCode = (int)response.StatusCode;
                         if (statusCode == 200)
                         {
-                            return;
+                            var objectResponse = await ReadObjectReponseAsync<BaseCommandResponse>(response, headers, CancellationToken.None).ConfigureAwait(false);
+                            if (objectResponse.Object == null)
+                            {
+                                throw new ApiException("", statusCode, objectResponse.Text, headers, null);
+                            }
+                            else
+                                return objectResponse.Object;
                         }
                         else
                         {
@@ -286,7 +300,7 @@ namespace CleanArchitecture.MVC.Services.Base
             }
         }
 
-        public async Task UpdateWeblog(UpdateWeblogDTOs model)
+        public async Task<BaseCommandResponse> UpdateWeblog(UpdateWeblogDTOs model)
         {
             if (model.ID == null)
                 throw new ArgumentNullException("id");
@@ -312,12 +326,12 @@ namespace CleanArchitecture.MVC.Services.Base
 
                     PrepareRequest(client, request, url);
 
-                    var response = await client.SendAsync(request,HttpCompletionOption.ResponseHeadersRead,CancellationToken.None);
+                    var response = await client.SendAsync(request, HttpCompletionOption.ResponseHeadersRead, CancellationToken.None);
                     disposeClient = true;
                     try
                     {
                         var headers = Enumerable.ToDictionary(response.Headers, h => h.Key, h => h.Value);
-                        if(response.Content != null && response.Content != null)
+                        if (response.Content != null && response.Content != null)
                         {
                             foreach (var header in response.Headers)
                                 headers[header.Key] = header.Value;
@@ -327,10 +341,18 @@ namespace CleanArchitecture.MVC.Services.Base
 
                         var statusCode = (int)response.StatusCode;
                         if (statusCode == 200)
-                            return;
+                        {
+                            var objectResponse = await ReadObjectReponseAsync<BaseCommandResponse>(response, headers, CancellationToken.None).ConfigureAwait(false);
+                            if (objectResponse.Object == null)
+                            {
+                                throw new ApiException("", statusCode, objectResponse.Text, headers, null);
+                            }
+                            else
+                                return objectResponse.Object;
+                        }
                         else
                         {
-                            var responseData = response.Content == null ? null :await response.Content.ReadAsStringAsync().ConfigureAwait(false);
+                            var responseData = response.Content == null ? null : await response.Content.ReadAsStringAsync().ConfigureAwait(false);
                             throw new ApiException("The HTTP status code of the response was not expected (" + statusCode + ").", statusCode, responseData, headers, null);
                         }
                     }

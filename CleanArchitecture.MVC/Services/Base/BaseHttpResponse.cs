@@ -23,7 +23,7 @@ namespace CleanArchitecture.MVC.Services.Base
 
         #endregion
 
-        protected GenericResponseApi<Guid> ConvretApiExceptions(ApiException exception)
+        protected GenericResponseApi<Guid> ConvretApiExceptions<Guid>(ApiException exception)
         {
             if(exception.StatusCode == 400)
             {

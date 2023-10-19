@@ -1,13 +1,15 @@
-﻿using CleanArichitecture.Application.DTOs.Weblog;
+﻿using CleanArchitecture.MVC.Model;
+using CleanArichitecture.Application.DTOs.Weblog;
+using CleanArichitecture.Application.Responses;
 
 namespace CleanArchitecture.MVC.Services.Base
 {
     public partial interface IClient
     {
-        Task<ICollection<WeblogListDTOs>> GetWeblogDTOd();
-        Task CreateWeblogDTO(CreateWeblogDTOs model);
-        Task UpdateWeblog(UpdateWeblogDTOs model);
+        Task<ICollection<WeblogListDTOs>> GetWeblogDTO();
+        Task<BaseCommandResponse> CreateWeblogDTO(CreateWeblogDTOs model);
+        Task<BaseCommandResponse> UpdateWeblog(UpdateWeblogDTOs model);
         Task<WeblogListDTOs> GetWeblogById(int id);
-        Task DeleteWeblog(int id);
+        Task<BaseCommandResponse> DeleteWeblog(int id);
     }
 }
