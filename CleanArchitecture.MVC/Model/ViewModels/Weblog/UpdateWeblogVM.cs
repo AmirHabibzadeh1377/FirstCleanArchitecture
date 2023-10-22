@@ -2,7 +2,7 @@
 
 namespace CleanArchitecture.MVC.Model.ViewModels.Weblog
 {
-    public class UpdateWeblogVM
+    public class UpdateWeblogVM:BaseVM
     {
         #region Ctor
 
