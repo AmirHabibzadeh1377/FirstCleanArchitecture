@@ -8,5 +8,6 @@ namespace CleanArichitecture.Application.DTOs.Weblog
         public string Slug { get; set; }
         public int WeblogCategoryId { get; set; }
         public string Title { get; set; }
+        public string Description { get; set; }
     }
 }

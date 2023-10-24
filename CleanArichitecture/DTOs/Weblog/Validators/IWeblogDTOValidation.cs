@@ -20,7 +20,7 @@ namespace CleanArichitecture.Application.DTOs.Weblog.Validators
                 .MaximumLength(50).WithMessage("here for write error message");
 
             RuleFor(cw => cw.Slug)
-                .Empty().WithMessage("message...")
+                .NotEmpty().WithMessage("message...")
                 .NotNull()
                 .MaximumLength(60).WithMessage("message ...");
 
@@ -29,7 +29,7 @@ namespace CleanArichitecture.Application.DTOs.Weblog.Validators
                 .MustAsync(async (id, token) =>
                 {
                     bool exists = await _weblogCategoryRepos.IsExist(id);
-                    return !exists;
+                    return exists;
                 }).WithMessage("message ...");
         }
     }

@@ -9,5 +9,6 @@ namespace CleanArichitecture.Application.DTOs.Weblog
         public WeblogCategoryDTOs WeblogCategoryDTOs { get; set; }
         public int WeblogCategoryId { get; set; }
         public string Title { get; set; }
+        public string Description { get; set; }
     }
 }

@@ -1,0 +1,10 @@
+﻿namespace CleanArchitecture.MVC3.Model.ViewModels.WeblogCategory
+{
+    public class CreateWeblogCategoryVM:BaseVM
+    {
+        public string Name { get; set; }
+        public string Slug { get; set; }
+        public string Title { get; set; }
+        public string Description { get; set; }
+    }
+}

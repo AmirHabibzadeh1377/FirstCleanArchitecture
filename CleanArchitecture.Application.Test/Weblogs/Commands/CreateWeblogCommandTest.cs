@@ -43,7 +43,8 @@ namespace CleanArchitecture.Application.Test.Weblogs.Commands
                 Name = "amir",
                 Slug = "test",
                 Title = "thi is title",
-                WeblogCategoryId = 1
+                WeblogCategoryId = 1,
+                Description = "test1";
             };
         }
 
