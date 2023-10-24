@@ -15,6 +15,7 @@ namespace CleanArchitecture.MVC.Profiles
             CreateMap<CreateWeblogDTOs, CreateWeblogVM>().ReverseMap();
             CreateMap<UpdateWeblogDTOs, UpdateWeblogVM>().ReverseMap();
             CreateMap<WeblogListDTOs, WeblogListVM>().ReverseMap();
+            CreateMap<UpdateWeblogVM, WeblogListVM>().ReverseMap();
 
             #endregion
 

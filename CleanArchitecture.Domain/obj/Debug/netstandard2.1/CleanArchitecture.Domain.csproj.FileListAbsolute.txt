@@ -25,4 +25,3 @@ C:\Users\C1-Student04\Desktop\FirstCleanArchitecture\CleanArchitecture.Domain\ob
 C:\Users\C1-Student04\Desktop\FirstCleanArchitecture\CleanArchitecture.Domain\obj\Debug\netstandard2.1\CleanArchitecture.Domain.csproj.CoreCompileInputs.cache
 C:\Users\C1-Student04\Desktop\FirstCleanArchitecture\CleanArchitecture.Domain\obj\Debug\netstandard2.1\CleanArchitecture.Domain.dll
 C:\Users\C1-Student04\Desktop\FirstCleanArchitecture\CleanArchitecture.Domain\obj\Debug\netstandard2.1\CleanArchitecture.Domain.pdb
-C:\Users\C1-Student04\Desktop\FirstCleanArchitecture\CleanArchitecture.Domain\obj\Debug\netstandard2.1\CleanArchitecture.Domain.csproj.AssemblyReference.cache
