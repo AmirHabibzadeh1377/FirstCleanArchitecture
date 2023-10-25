@@ -33,7 +33,7 @@ namespace ClearnArchitecture.Api.Controllers
         [HttpGet]
         public async Task<ActionResult<List<WeblogListDTOs>>> Get()
         {
-            var weblogListDTOs =await _mediator.Send(new GetWeblogListRequest());
+            var weblogListDTOs = await _mediator.Send(new GetWeblogListRequest());
             return Ok(weblogListDTOs);
         }
 
@@ -50,7 +50,7 @@ namespace ClearnArchitecture.Api.Controllers
         public async Task<ActionResult> Post([FromBody] CreateWeblogDTOs model)
         {
             var createCommand = new CreateWeblogRequest { CreateWeblogDTOs = model };
-            var response = await _mediator.Send(createCommand);
+            var response = await _mediator.Send(new CreateWeblogRequest { CreateWeblogDTOs = model });
             return Ok(response);
         }
 
