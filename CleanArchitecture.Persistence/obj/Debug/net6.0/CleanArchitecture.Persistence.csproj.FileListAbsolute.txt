@@ -1,0 +1,17 @@
+C:\Users\Student\Desktop\New folder\FirstCleanArchitecture\CleanArchitecture.Persistence\bin\Debug\net6.0\CleanArchitecture.Persistence.deps.json
+C:\Users\Student\Desktop\New folder\FirstCleanArchitecture\CleanArchitecture.Persistence\bin\Debug\net6.0\CleanArchitecture.Persistence.dll
+C:\Users\Student\Desktop\New folder\FirstCleanArchitecture\CleanArchitecture.Persistence\bin\Debug\net6.0\ref\CleanArchitecture.Persistence.dll
+C:\Users\Student\Desktop\New folder\FirstCleanArchitecture\CleanArchitecture.Persistence\bin\Debug\net6.0\CleanArchitecture.Persistence.pdb
+C:\Users\Student\Desktop\New folder\FirstCleanArchitecture\CleanArchitecture.Persistence\bin\Debug\net6.0\CleanArchitecture.Domain.dll
+C:\Users\Student\Desktop\New folder\FirstCleanArchitecture\CleanArchitecture.Persistence\bin\Debug\net6.0\CleanArichitecture.Application.dll
+C:\Users\Student\Desktop\New folder\FirstCleanArchitecture\CleanArchitecture.Persistence\bin\Debug\net6.0\CleanArichitecture.Application.pdb
+C:\Users\Student\Desktop\New folder\FirstCleanArchitecture\CleanArchitecture.Persistence\bin\Debug\net6.0\CleanArchitecture.Domain.pdb
+C:\Users\Student\Desktop\New folder\FirstCleanArchitecture\CleanArchitecture.Persistence\obj\Debug\net6.0\CleanArchitecture.Persistence.csproj.AssemblyReference.cache
+C:\Users\Student\Desktop\New folder\FirstCleanArchitecture\CleanArchitecture.Persistence\obj\Debug\net6.0\CleanArchitecture.Persistence.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Student\Desktop\New folder\FirstCleanArchitecture\CleanArchitecture.Persistence\obj\Debug\net6.0\CleanArchitecture.Persistence.AssemblyInfoInputs.cache
+C:\Users\Student\Desktop\New folder\FirstCleanArchitecture\CleanArchitecture.Persistence\obj\Debug\net6.0\CleanArchitecture.Persistence.AssemblyInfo.cs
+C:\Users\Student\Desktop\New folder\FirstCleanArchitecture\CleanArchitecture.Persistence\obj\Debug\net6.0\CleanArchitecture.Persistence.csproj.CoreCompileInputs.cache
+C:\Users\Student\Desktop\New folder\FirstCleanArchitecture\CleanArchitecture.Persistence\obj\Debug\net6.0\CleanArchitecture.Persistence.csproj.CopyComplete
+C:\Users\Student\Desktop\New folder\FirstCleanArchitecture\CleanArchitecture.Persistence\obj\Debug\net6.0\CleanArchitecture.Persistence.dll
+C:\Users\Student\Desktop\New folder\FirstCleanArchitecture\CleanArchitecture.Persistence\obj\Debug\net6.0\ref\CleanArchitecture.Persistence.dll
+C:\Users\Student\Desktop\New folder\FirstCleanArchitecture\CleanArchitecture.Persistence\obj\Debug\net6.0\CleanArchitecture.Persistence.pdb

@@ -1,0 +1,14 @@
+C:\Users\Student\Desktop\New folder\FirstCleanArchitecture\CleanArchitecture.Identity\bin\Debug\net6.0\CleanArchitecture.Identity.deps.json
+C:\Users\Student\Desktop\New folder\FirstCleanArchitecture\CleanArchitecture.Identity\bin\Debug\net6.0\CleanArchitecture.Identity.runtimeconfig.json
+C:\Users\Student\Desktop\New folder\FirstCleanArchitecture\CleanArchitecture.Identity\bin\Debug\net6.0\CleanArchitecture.Identity.dll
+C:\Users\Student\Desktop\New folder\FirstCleanArchitecture\CleanArchitecture.Identity\bin\Debug\net6.0\ref\CleanArchitecture.Identity.dll
+C:\Users\Student\Desktop\New folder\FirstCleanArchitecture\CleanArchitecture.Identity\bin\Debug\net6.0\CleanArchitecture.Identity.pdb
+C:\Users\Student\Desktop\New folder\FirstCleanArchitecture\CleanArchitecture.Identity\obj\Debug\net6.0\CleanArchitecture.Identity.csproj.AssemblyReference.cache
+C:\Users\Student\Desktop\New folder\FirstCleanArchitecture\CleanArchitecture.Identity\obj\Debug\net6.0\CleanArchitecture.Identity.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Student\Desktop\New folder\FirstCleanArchitecture\CleanArchitecture.Identity\obj\Debug\net6.0\CleanArchitecture.Identity.AssemblyInfoInputs.cache
+C:\Users\Student\Desktop\New folder\FirstCleanArchitecture\CleanArchitecture.Identity\obj\Debug\net6.0\CleanArchitecture.Identity.AssemblyInfo.cs
+C:\Users\Student\Desktop\New folder\FirstCleanArchitecture\CleanArchitecture.Identity\obj\Debug\net6.0\CleanArchitecture.Identity.csproj.CoreCompileInputs.cache
+C:\Users\Student\Desktop\New folder\FirstCleanArchitecture\CleanArchitecture.Identity\obj\Debug\net6.0\CleanArchitecture.Identity.dll
+C:\Users\Student\Desktop\New folder\FirstCleanArchitecture\CleanArchitecture.Identity\obj\Debug\net6.0\ref\CleanArchitecture.Identity.dll
+C:\Users\Student\Desktop\New folder\FirstCleanArchitecture\CleanArchitecture.Identity\obj\Debug\net6.0\CleanArchitecture.Identity.pdb
+C:\Users\Student\Desktop\New folder\FirstCleanArchitecture\CleanArchitecture.Identity\obj\Debug\net6.0\CleanArchitecture.Identity.genruntimeconfig.cache

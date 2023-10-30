@@ -44,7 +44,7 @@ namespace CleanArchitecture.Application.Test.Weblogs.Commands
                 Slug = "test",
                 Title = "thi is title",
                 WeblogCategoryId = 1,
-                Description = "test1";
+                Description = "test1"
             };
         }
 

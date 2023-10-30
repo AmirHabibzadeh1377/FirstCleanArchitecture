@@ -45,7 +45,12 @@
       "ProjectGuid": "24296368-b8e3-41a0-bd9f-5d419614ee46",
       "DisplayName": "MVC3",
       "ColorIndex": 7
+    },
+    "a0b72909-5e42-4f7e-9a6c-18f822744e0d": {
+      "ProjectGuid": "a0b72909-5e42-4f7e-9a6c-18f822744e0d",
+      "DisplayName": "CleanArchitecture.Identity",
+      "ColorIndex": 8
     }
   },
-  "NextColorIndex": 8
+  "NextColorIndex": 9
 }

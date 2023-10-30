@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "K6a+9l/UEbY7ifXi1X+J0PROQrTZIXZEPj7Vysrm8+s=",
+  "Hash": "Y8uag0iQWUAINoOXjJfVXeuAvZ9tHiYii6aF44vkQCI=",
   "Source": "MVC3",
   "BasePath": "_content/MVC3",
   "Mode": "Default",
@@ -8,12 +8,12 @@
   "ReferencedProjectsConfiguration": [
     {
       "Identity": "C:\\Users\\Student\\Desktop\\New folder\\FirstCleanArchitecture\\ClearnArchitecture.Api\\ClearnArchitecture.Api.csproj",
-      "Version": 1,
+      "Version": 2,
       "Source": "ClearnArchitecture.Api",
-      "GetPublishAssetsTargets": "",
+      "GetPublishAssetsTargets": "ComputeReferencedStaticWebAssetsPublishManifest;GetCurrentProjectPublishStaticWebAssetItems",
       "AdditionalPublishProperties": "Configuration=Debug;Platform=AnyCPU",
       "AdditionalPublishPropertiesToRemove": "WebPublishProfileFile;TargetFramework;RuntimeIdentifier",
-      "GetBuildAssetsTargets": "GetCurrentProjectStaticWebAssetsV2",
+      "GetBuildAssetsTargets": "GetCurrentProjectBuildStaticWebAssetItems",
       "AdditionalBuildProperties": "Configuration=Debug;Platform=AnyCPU",
       "AdditionalBuildPropertiesToRemove": "WebPublishProfileFile;TargetFramework;RuntimeIdentifier"
     }

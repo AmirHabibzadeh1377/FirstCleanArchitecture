@@ -1,0 +1,17 @@
+C:\Users\Student\Desktop\New folder\FirstCleanArchitecture\CleanArchitecture.Infrastructure\bin\Debug\net6.0\CleanArchitecture.Infrastructure.deps.json
+C:\Users\Student\Desktop\New folder\FirstCleanArchitecture\CleanArchitecture.Infrastructure\bin\Debug\net6.0\CleanArchitecture.Infrastructure.dll
+C:\Users\Student\Desktop\New folder\FirstCleanArchitecture\CleanArchitecture.Infrastructure\bin\Debug\net6.0\ref\CleanArchitecture.Infrastructure.dll
+C:\Users\Student\Desktop\New folder\FirstCleanArchitecture\CleanArchitecture.Infrastructure\bin\Debug\net6.0\CleanArchitecture.Infrastructure.pdb
+C:\Users\Student\Desktop\New folder\FirstCleanArchitecture\CleanArchitecture.Infrastructure\bin\Debug\net6.0\CleanArchitecture.Domain.dll
+C:\Users\Student\Desktop\New folder\FirstCleanArchitecture\CleanArchitecture.Infrastructure\bin\Debug\net6.0\CleanArichitecture.Application.dll
+C:\Users\Student\Desktop\New folder\FirstCleanArchitecture\CleanArchitecture.Infrastructure\bin\Debug\net6.0\CleanArichitecture.Application.pdb
+C:\Users\Student\Desktop\New folder\FirstCleanArchitecture\CleanArchitecture.Infrastructure\bin\Debug\net6.0\CleanArchitecture.Domain.pdb
+C:\Users\Student\Desktop\New folder\FirstCleanArchitecture\CleanArchitecture.Infrastructure\obj\Debug\net6.0\CleanArchitecture.Infrastructure.csproj.AssemblyReference.cache
+C:\Users\Student\Desktop\New folder\FirstCleanArchitecture\CleanArchitecture.Infrastructure\obj\Debug\net6.0\CleanArchitecture.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Student\Desktop\New folder\FirstCleanArchitecture\CleanArchitecture.Infrastructure\obj\Debug\net6.0\CleanArchitecture.Infrastructure.AssemblyInfoInputs.cache
+C:\Users\Student\Desktop\New folder\FirstCleanArchitecture\CleanArchitecture.Infrastructure\obj\Debug\net6.0\CleanArchitecture.Infrastructure.AssemblyInfo.cs
+C:\Users\Student\Desktop\New folder\FirstCleanArchitecture\CleanArchitecture.Infrastructure\obj\Debug\net6.0\CleanArchitecture.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\Student\Desktop\New folder\FirstCleanArchitecture\CleanArchitecture.Infrastructure\obj\Debug\net6.0\CleanArchitecture.Infrastructure.csproj.CopyComplete
+C:\Users\Student\Desktop\New folder\FirstCleanArchitecture\CleanArchitecture.Infrastructure\obj\Debug\net6.0\CleanArchitecture.Infrastructure.dll
+C:\Users\Student\Desktop\New folder\FirstCleanArchitecture\CleanArchitecture.Infrastructure\obj\Debug\net6.0\ref\CleanArchitecture.Infrastructure.dll
+C:\Users\Student\Desktop\New folder\FirstCleanArchitecture\CleanArchitecture.Infrastructure\obj\Debug\net6.0\CleanArchitecture.Infrastructure.pdb

@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "JsWZQPe+Vv2ObbwhlmoCQJv+H4butN6IYV9uCwRbvR3kVRbpLkC36xeZ8av9wTM+KRdCNjsXAdvvF7f+H8IisQ==",
+  "dgSpecHash": "a4TbWev3KGfFWfDIwX2nr1Ag3GoYj2q2c8bL9JNf7coqfNCcYR2IUvFpzfN8sB01gEy/ykrWSPZab4h5fHRSWA==",
   "success": true,
   "projectFilePath": "C:\\Users\\Student\\Desktop\\New folder\\FirstCleanArchitecture\\CleanArchitecture.Application.Test\\CleanArchitecture.Application.Test.csproj",
   "expectedPackageFiles": [
@@ -10,8 +10,8 @@
     "C:\\Users\\Student\\.nuget\\packages\\coverlet.collector\\3.0.2\\coverlet.collector.3.0.2.nupkg.sha512",
     "C:\\Users\\Student\\.nuget\\packages\\diffengine\\11.3.0\\diffengine.11.3.0.nupkg.sha512",
     "C:\\Users\\Student\\.nuget\\packages\\emptyfiles\\4.4.0\\emptyfiles.4.4.0.nupkg.sha512",
-    "C:\\Users\\Student\\.nuget\\packages\\fluentvalidation\\11.7.1\\fluentvalidation.11.7.1.nupkg.sha512",
-    "C:\\Users\\Student\\.nuget\\packages\\fluentvalidation.dependencyinjectionextensions\\11.7.1\\fluentvalidation.dependencyinjectionextensions.11.7.1.nupkg.sha512",
+    "C:\\Users\\Student\\.nuget\\packages\\fluentvalidation\\11.8.0\\fluentvalidation.11.8.0.nupkg.sha512",
+    "C:\\Users\\Student\\.nuget\\packages\\fluentvalidation.dependencyinjectionextensions\\11.8.0\\fluentvalidation.dependencyinjectionextensions.11.8.0.nupkg.sha512",
     "C:\\Users\\Student\\.nuget\\packages\\mediatr\\12.1.1\\mediatr.12.1.1.nupkg.sha512",
     "C:\\Users\\Student\\.nuget\\packages\\mediatr.contracts\\2.0.1\\mediatr.contracts.2.0.1.nupkg.sha512",
     "C:\\Users\\Student\\.nuget\\packages\\microsoft.aspnetcore.antiforgery\\2.2.0\\microsoft.aspnetcore.antiforgery.2.2.0.nupkg.sha512",
