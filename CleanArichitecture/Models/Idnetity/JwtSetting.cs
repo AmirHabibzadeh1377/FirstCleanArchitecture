@@ -5,6 +5,6 @@
         public string Key { get; set; }
         public string IsSure { get; set; }
         public string Audience { get; set; }
-        public string DurationInMinutes { get; set; }
+        public int DurationInMinutes { get; set; }
     }
 }
