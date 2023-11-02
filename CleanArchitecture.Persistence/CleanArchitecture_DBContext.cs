@@ -8,7 +8,7 @@ namespace CleanArchitecture.Persistence
 {
     public class CleanArchitecture_DBContext : DbContext
     {
-        public CleanArchitecture_DBContext(DbContextOptions options) : base(options)
+        public CleanArchitecture_DBContext(DbContextOptions<CleanArchitecture_DBContext> options) : base(options)
         {
 
         }

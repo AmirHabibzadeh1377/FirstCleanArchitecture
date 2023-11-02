@@ -1,8 +1,9 @@
 ﻿using CleanArchitecture.Identity.Models;
+using CleanArchitecture.Identity.Services;
 
 using CleanArichitecture.Application.Models.Idnetity;
+using CleanArichitecture.Application.Persistence.ServiceContract.Identity;
 
-using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
@@ -21,14 +22,14 @@ namespace CleanArchitecture.Identity
             services.Configure<JwtSetting>(configuration.GetSection("jwtSettings"));
             services.AddDbContext<CleanArchitectureIdentityDbContext>(options =>
             {
-                options.UseSqlServer(configuration.GetConnectionString(""),
+                options.UseSqlServer(configuration.GetConnectionString("CleanArchitectureIdentityConnectionString"),
                     b => b.MigrationsAssembly(typeof(CleanArchitectureIdentityDbContext).Assembly.FullName));
             });
 
             services.AddIdentity<ApplicationUser, IdentityRole>()
                 .AddEntityFrameworkStores<CleanArchitectureIdentityDbContext>().AddDefaultTokenProviders();
 
-            services.AddTransient<IAuthenticationService, AuthenticationService>();
+            services.AddTransient<IAuthenticationsService, AuthenticationsService>();
 
             services.AddAuthentication(options =>
             {

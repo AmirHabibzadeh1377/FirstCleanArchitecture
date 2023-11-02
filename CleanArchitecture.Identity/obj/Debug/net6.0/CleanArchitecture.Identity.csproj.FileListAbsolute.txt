@@ -12,3 +12,8 @@ C:\Users\Student\Desktop\New folder\FirstCleanArchitecture\CleanArchitecture.Ide
 C:\Users\Student\Desktop\New folder\FirstCleanArchitecture\CleanArchitecture.Identity\obj\Debug\net6.0\ref\CleanArchitecture.Identity.dll
 C:\Users\Student\Desktop\New folder\FirstCleanArchitecture\CleanArchitecture.Identity\obj\Debug\net6.0\CleanArchitecture.Identity.pdb
 C:\Users\Student\Desktop\New folder\FirstCleanArchitecture\CleanArchitecture.Identity\obj\Debug\net6.0\CleanArchitecture.Identity.genruntimeconfig.cache
+C:\Users\Student\Desktop\New folder\FirstCleanArchitecture\CleanArchitecture.Identity\bin\Debug\net6.0\CleanArchitecture.Domain.dll
+C:\Users\Student\Desktop\New folder\FirstCleanArchitecture\CleanArchitecture.Identity\bin\Debug\net6.0\CleanArichitecture.Application.dll
+C:\Users\Student\Desktop\New folder\FirstCleanArchitecture\CleanArchitecture.Identity\bin\Debug\net6.0\CleanArichitecture.Application.pdb
+C:\Users\Student\Desktop\New folder\FirstCleanArchitecture\CleanArchitecture.Identity\bin\Debug\net6.0\CleanArchitecture.Domain.pdb
+C:\Users\Student\Desktop\New folder\FirstCleanArchitecture\CleanArchitecture.Identity\obj\Debug\net6.0\CleanArchitecture.Identity.csproj.CopyComplete

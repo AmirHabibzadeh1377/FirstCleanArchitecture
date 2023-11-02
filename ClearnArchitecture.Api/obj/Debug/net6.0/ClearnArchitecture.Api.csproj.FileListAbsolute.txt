@@ -101,3 +101,11 @@ C:\Users\Student\Desktop\New folder\FirstCleanArchitecture\ClearnArchitecture.Ap
 C:\Users\Student\Desktop\New folder\FirstCleanArchitecture\ClearnArchitecture.Api\obj\Debug\net6.0\ref\ClearnArchitecture.Api.dll
 C:\Users\Student\Desktop\New folder\FirstCleanArchitecture\ClearnArchitecture.Api\obj\Debug\net6.0\ClearnArchitecture.Api.pdb
 C:\Users\Student\Desktop\New folder\FirstCleanArchitecture\ClearnArchitecture.Api\obj\Debug\net6.0\ClearnArchitecture.Api.genruntimeconfig.cache
+C:\Users\Student\Desktop\New folder\FirstCleanArchitecture\ClearnArchitecture.Api\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\Student\Desktop\New folder\FirstCleanArchitecture\ClearnArchitecture.Api\bin\Debug\net6.0\Microsoft.AspNetCore.Cryptography.Internal.dll
+C:\Users\Student\Desktop\New folder\FirstCleanArchitecture\ClearnArchitecture.Api\bin\Debug\net6.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+C:\Users\Student\Desktop\New folder\FirstCleanArchitecture\ClearnArchitecture.Api\bin\Debug\net6.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+C:\Users\Student\Desktop\New folder\FirstCleanArchitecture\ClearnArchitecture.Api\bin\Debug\net6.0\Microsoft.Extensions.Identity.Core.dll
+C:\Users\Student\Desktop\New folder\FirstCleanArchitecture\ClearnArchitecture.Api\bin\Debug\net6.0\Microsoft.Extensions.Identity.Stores.dll
+C:\Users\Student\Desktop\New folder\FirstCleanArchitecture\ClearnArchitecture.Api\bin\Debug\net6.0\CleanArchitecture.Identity.dll
+C:\Users\Student\Desktop\New folder\FirstCleanArchitecture\ClearnArchitecture.Api\bin\Debug\net6.0\CleanArchitecture.Identity.pdb
