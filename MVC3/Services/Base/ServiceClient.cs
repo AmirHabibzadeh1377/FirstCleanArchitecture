@@ -434,9 +434,66 @@ namespace CleanArchitecture.MVC3.Services.Base
             }
         }
 
-        public Task<RegistrationResponse> Register(RegistrationRequest request)
+        public async Task<RegistrationResponse> Register(RegistrationRequest regRequest)
         {
-            throw new NotImplementedException();
+            var urlBuilder = new StringBuilder();
+            urlBuilder.Append(BaseUrl != null ? BaseUrl.TrimEnd('/') : "").Append("api/Account/login");
+            var client = _httpClient;
+            var clientDispose = false;
+            try
+            {
+                using (var request = new HttpRequestMessage())
+                {
+                    var json = JsonConvert.SerializeObject(regRequest, _jsonSetting.Value);
+                    var content = new StringContent(json, Encoding.UTF8);
+                    content.Headers.ContentType = new MediaTypeHeaderValue("application/json");
+                    request.Content = content;
+                    request.Method = HttpMethod.Post;
+                    PrepareRequest(client, request, urlBuilder);
+                    var url = urlBuilder.ToString();
+                    request.RequestUri = new Uri(url);
+                    PrepareRequest(client, request, url);
+                    var response = await client.SendAsync(request, HttpCompletionOption.ResponseHeadersRead, CancellationToken.None);
+                    clientDispose = true;
+                    try
+                    {
+                        var headers = Enumerable.ToDictionary(response.Headers, h => h.Key, h => h.Value);
+                        if (response.Content != null && response.Content != null)
+                        {
+                            foreach (var header in response.Headers)
+                                headers[header.Key] = header.Value;
+                        }
+                        ProcessResponse(client, response);
+
+                        var statusCode = (int)response.StatusCode;
+                        if (statusCode == 200)
+                        {
+                            var objectResponse = await ReadObjectReponseAsync<RegistrationResponse>(response, headers, CancellationToken.None).ConfigureAwait(false);
+                            if (objectResponse.Object == null)
+                            {
+                                throw new ApiException("", statusCode, objectResponse.Text, headers, null);
+                            }
+                            else
+                                return objectResponse.Object;
+                        }
+                        else
+                        {
+                            var responseData = response.Content == null ? null : await response.Content.ReadAsStringAsync().ConfigureAwait(false);
+                            throw new ApiException("The HTTP status code of the response was not expected (" + statusCode + ").", statusCode, responseData, headers, null);
+                        }
+                    }
+                    finally
+                    {
+                        if (clientDispose)
+                            client.Dispose();
+                    }
+                }
+            }
+            finally
+            {
+                if (clientDispose)
+                    client.Dispose();
+            }
         }
 
 
