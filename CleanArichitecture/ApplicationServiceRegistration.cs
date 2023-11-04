@@ -1,4 +1,6 @@
-﻿using MediatR;
+﻿using CleanArichitecture.Application.Persistence.ServiceContract.Identity;
+
+using MediatR;
 using Microsoft.Extensions.DependencyInjection;
 using System.Reflection;
 

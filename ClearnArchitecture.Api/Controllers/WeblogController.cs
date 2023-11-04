@@ -2,6 +2,8 @@
 using CleanArichitecture.Application.Features.Requests.Weblog.Commands;
 using CleanArichitecture.Application.Features.Requests.Weblog.Queries;
 using MediatR;
+
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
 using System.Threading.Tasks;
@@ -12,6 +14,7 @@ namespace ClearnArchitecture.Api.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize]
     public class WeblogController : ControllerBase
     {
         #region Fields

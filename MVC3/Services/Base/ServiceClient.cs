@@ -1,8 +1,12 @@
 ﻿using CleanArchitecture.MVC3.Model;
+
 using CleanArichitecture.Application.DTOs.Weblog;
 using CleanArichitecture.Application.Exeptions;
+using CleanArichitecture.Application.Models.Idnetity;
 using CleanArichitecture.Application.Responses;
+
 using Newtonsoft.Json;
+
 using System.Globalization;
 using System.Net.Http.Headers;
 using System.Text;
@@ -189,7 +193,6 @@ namespace CleanArchitecture.MVC3.Services.Base
                 {
                     request.Method = HttpMethod.Get;
                     request.Headers.Accept.Add(MediaTypeWithQualityHeaderValue.Parse("application/json"));
-
                     PrepareRequest(client, request, urlBuilder);
 
                     var url = urlBuilder.ToString();
@@ -256,7 +259,7 @@ namespace CleanArchitecture.MVC3.Services.Base
             request.Headers.Accept.Add(MediaTypeWithQualityHeaderValue.Parse("text/plain"));
             PrepareRequest(client, request, urlBilder);
             var url = urlBilder.ToString();
-            request.RequestUri = new Uri(url,UriKind.RelativeOrAbsolute);
+            request.RequestUri = new Uri(url, UriKind.RelativeOrAbsolute);
             PrepareRequest(client, request, url);
             var response = await client.SendAsync(request, HttpCompletionOption.ResponseHeadersRead, CancellationToken.None).ConfigureAwait(false);
             var disposeResponse = true;
@@ -369,6 +372,74 @@ namespace CleanArchitecture.MVC3.Services.Base
             }
         }
 
+        public async Task<AuthResponse> Login(AuthRequest authRequest)
+        {
+            var urlBuilder = new StringBuilder();
+            urlBuilder.Append(BaseUrl != null ? BaseUrl.TrimEnd('/') : "").Append("api/Account/login");
+            var client = _httpClient;
+            var clientDispose = false;
+            try
+            {
+                using(var request = new HttpRequestMessage())
+                {
+                    var json = JsonConvert.SerializeObject(authRequest, _jsonSetting.Value);
+                    var content = new StringContent(json, Encoding.UTF8);
+                    content.Headers.ContentType = new MediaTypeHeaderValue("application/json");
+                    request.Content = content;
+                    request.Method = HttpMethod.Post;
+                    PrepareRequest(client, request, urlBuilder);
+                    var url = urlBuilder.ToString();
+                    request.RequestUri = new Uri(url);
+                    PrepareRequest(client, request, url);
+                    var response = await client.SendAsync(request, HttpCompletionOption.ResponseHeadersRead, CancellationToken.None);
+                    clientDispose = true;
+                    try
+                    {
+                        var headers = Enumerable.ToDictionary(response.Headers, h => h.Key, h => h.Value);
+                        if (response.Content != null && response.Content != null)
+                        {
+                            foreach (var header in response.Headers)
+                                headers[header.Key] = header.Value;
+                        }
+                        ProcessResponse(client, response);
+
+                        var statusCode = (int)response.StatusCode;
+                        if (statusCode == 200)
+                        {
+                            var objectResponse = await ReadObjectReponseAsync<AuthResponse>(response, headers, CancellationToken.None).ConfigureAwait(false);
+                            if (objectResponse.Object == null)
+                            {
+                                throw new ApiException("", statusCode, objectResponse.Text, headers, null);
+                            }
+                            else
+                                return objectResponse.Object;
+                        }
+                        else
+                        {
+                            var responseData = response.Content == null ? null : await response.Content.ReadAsStringAsync().ConfigureAwait(false);
+                            throw new ApiException("The HTTP status code of the response was not expected (" + statusCode + ").", statusCode, responseData, headers, null);
+                        }
+                    }
+                    finally
+                    {
+                        if (clientDispose)
+                            client.Dispose();
+                    }
+                }
+            }
+            finally
+            {
+                if (clientDispose)
+                    client.Dispose();
+            }
+        }
+
+        public Task<RegistrationResponse> Register(RegistrationRequest request)
+        {
+            throw new NotImplementedException();
+        }
+
+
         #region Utility
 
         private JsonSerializerSettings CreateJsonSerializerSetting()
@@ -382,7 +453,6 @@ namespace CleanArchitecture.MVC3.Services.Base
         partial void PrepareRequest(HttpClient client, HttpRequestMessage request, string url);
         partial void PrepareRequest(HttpClient client, HttpRequestMessage request, StringBuilder urlBuilder);
         partial void ProcessResponse(HttpClient client, HttpResponseMessage response);
-
         protected struct ObjectResponseResult<T>
         {
             public ObjectResponseResult(T responseObject, string responseText)
@@ -395,7 +465,6 @@ namespace CleanArchitecture.MVC3.Services.Base
 
             public string Text { get; }
         }
-
         protected bool ReadResponseAsString { get; set; }
         protected virtual async Task<ObjectResponseResult<T>> ReadObjectReponseAsync<T>(HttpResponseMessage response, IReadOnlyDictionary<string, IEnumerable<string>> headers, CancellationToken cancellationToken)
         {
