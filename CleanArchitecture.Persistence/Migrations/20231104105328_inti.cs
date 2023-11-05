@@ -1,9 +1,13 @@
 ﻿using Microsoft.EntityFrameworkCore.Migrations;
 
+#nullable disable
+
 namespace CleanArchitecture.Persistence.Migrations
 {
-    public partial class init : Migration
+    /// <inheritdoc />
+    public partial class inti : Migration
     {
+        /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
@@ -51,6 +55,7 @@ namespace CleanArchitecture.Persistence.Migrations
                 column: "WeblogCategoryId");
         }
 
+        /// <inheritdoc />
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(

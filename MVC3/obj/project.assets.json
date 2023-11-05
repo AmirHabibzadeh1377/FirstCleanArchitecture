@@ -1838,10 +1838,12 @@
       "Microsoft.Extensions.ApiDescription.Server/6.0.5": {
         "type": "package",
         "build": {
-          "build/_._": {}
+          "build/Microsoft.Extensions.ApiDescription.Server.props": {},
+          "build/Microsoft.Extensions.ApiDescription.Server.targets": {}
         },
         "buildMultiTargeting": {
-          "buildMultiTargeting/_._": {}
+          "buildMultiTargeting/Microsoft.Extensions.ApiDescription.Server.props": {},
+          "buildMultiTargeting/Microsoft.Extensions.ApiDescription.Server.targets": {}
         }
       },
       "Microsoft.Extensions.Caching.Abstractions/7.0.0": {
@@ -2837,7 +2839,7 @@
           "Swashbuckle.AspNetCore.SwaggerUI": "6.5.0"
         },
         "build": {
-          "build/_._": {}
+          "build/Swashbuckle.AspNetCore.props": {}
         }
       },
       "Swashbuckle.AspNetCore.Swagger/6.5.0": {
@@ -12933,7 +12935,8 @@
       "ClearnArchitecture.Api >= 1.0.0",
       "LocalStorage >= 2.1.0",
       "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 6.0.16",
-      "Newtonsoft.Json >= 13.0.3"
+      "Newtonsoft.Json >= 13.0.3",
+      "Swashbuckle.AspNetCore >= 6.5.0"
     ]
   },
   "packageFolders": {
@@ -13001,6 +13004,10 @@
           "Newtonsoft.Json": {
             "target": "Package",
             "version": "[13.0.3, )"
+          },
+          "Swashbuckle.AspNetCore": {
+            "target": "Package",
+            "version": "[6.5.0, )"
           }
         },
         "imports": [

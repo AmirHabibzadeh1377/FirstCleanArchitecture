@@ -14,7 +14,8 @@
           "ClearnArchitecture.Api": "1.0.0",
           "LocalStorage": "2.1.0",
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": "6.0.16",
-          "Newtonsoft.Json": "13.0.3"
+          "Newtonsoft.Json": "13.0.3",
+          "Swashbuckle.AspNetCore": "6.5.0"
         },
         "runtime": {
           "MVC3.dll": {}
