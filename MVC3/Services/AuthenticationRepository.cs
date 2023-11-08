@@ -1,14 +1,10 @@
 ﻿using CleanArchitecture.MVC3;
 using CleanArchitecture.MVC3.Services.Base;
-
 using CleanArichitecture.Application.Models.Idnetity;
-
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.Cookies;
-
 using MVC3.Contract;
-using MVC3.Model;
-
+using MVC3.Model.ViewModels.UserAccount;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 
@@ -63,7 +59,7 @@ namespace MVC3.Services
             await _contextAccessor.HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
         }
 
-        public async Task<bool> Register(RegisterModel model)
+        public async Task<bool> Register(RegisterVM model)
         {
             try
             {
@@ -73,7 +69,7 @@ namespace MVC3.Services
                     FirstName = model.FirstName,
                     LastName = model.LastName,
                     Password = model.Password,
-                    UserName = model.UserName
+                    UserName = model.Email
                 };
 
                 var response = await _client.Register(register);

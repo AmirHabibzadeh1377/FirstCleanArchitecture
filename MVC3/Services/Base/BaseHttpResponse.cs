@@ -40,7 +40,7 @@ namespace CleanArchitecture.MVC3.Services.Base
             }
         }
 
-        protected void AddBrearerToken()
+        protected void AddBearerToken()
         {
             if (_localStorageService.ExistsLocalStorage("token"))
             {

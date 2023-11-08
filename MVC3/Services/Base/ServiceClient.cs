@@ -437,7 +437,7 @@ namespace CleanArchitecture.MVC3.Services.Base
         public async Task<RegistrationResponse> Register(RegistrationRequest regRequest)
         {
             var urlBuilder = new StringBuilder();
-            urlBuilder.Append(BaseUrl != null ? BaseUrl.TrimEnd('/') : "").Append("api/Account/login");
+            urlBuilder.Append(BaseUrl != null ? BaseUrl.TrimEnd('/') : "").Append("api/Account/register");
             var client = _httpClient;
             var clientDispose = false;
             try
@@ -451,7 +451,7 @@ namespace CleanArchitecture.MVC3.Services.Base
                     request.Method = HttpMethod.Post;
                     PrepareRequest(client, request, urlBuilder);
                     var url = urlBuilder.ToString();
-                    request.RequestUri = new Uri(url);
+                    request.RequestUri = new Uri(url,url);
                     PrepareRequest(client, request, url);
                     var response = await client.SendAsync(request, HttpCompletionOption.ResponseHeadersRead, CancellationToken.None);
                     clientDispose = true;
