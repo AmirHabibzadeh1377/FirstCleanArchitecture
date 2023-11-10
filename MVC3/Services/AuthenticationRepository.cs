@@ -1,8 +1,12 @@
 ﻿using CleanArchitecture.MVC3;
 using CleanArchitecture.MVC3.Services.Base;
+using CleanArichitecture.Application.Models.Idnetity;
+using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Authentication.Cookies;
 using MVC3.Contract;
-using MVC3.Model;
+using MVC3.Model.ViewModels.UserAccount;
 using System.IdentityModel.Tokens.Jwt;
+using System.Security.Claims;
 
 namespace MVC3.Services
 {
@@ -18,7 +22,7 @@ namespace MVC3.Services
         #region Ctor
 
         public AuthenticationRepository(IHttpContextAccessor contextAccessor, IClient client, ILocalStorageServiceContract localStorageService)
-            :base(localStorageService,client)
+            : base(localStorageService, client)
         {
             _contextAccessor = contextAccessor;
             jwtSecurityTokenHandler = new JwtSecurityTokenHandler();
@@ -26,19 +30,66 @@ namespace MVC3.Services
 
         #endregion
 
-        public Task<bool> Authentication(string email, string password)
+        public async Task<bool> Authentication(string email, string password)
         {
-            throw new NotImplementedException();
+            try
+            {
+                var authRequest = new AuthRequest { Email = email, Password = password };
+                var authResponse = await _client.Login(authRequest);
+                if (!string.IsNullOrWhiteSpace(authResponse.Token))
+                {
+                    var tokenContent = jwtSecurityTokenHandler.ReadJwtToken(authResponse.Token);
+                    var claims = ParseClaims(tokenContent);
+                    var user = new ClaimsPrincipal(new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme));
+                    var login = _contextAccessor.HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, user);
+                    _localStorageService.SetLocalStorage("token", authResponse.Token);
+                    return true;
+                }
+                return false;
+            }
+            catch
+            {
+                return false;
+            }
         }
 
-        public Task LogOut()
+        public async Task LogOut()
         {
-            throw new NotImplementedException();
+            _localStorageService.ClearLocalStorage(new List<string> { "token" });
+            await _contextAccessor.HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
         }
 
-        public Task<bool> Register(RegisterModel model)
+        public async Task<bool> Register(RegisterVM model)
         {
-            throw new NotImplementedException();
+            try
+            {
+                var register = new RegistrationRequest
+                {
+                    Email = model.Email,
+                    FirstName = model.FirstName,
+                    LastName = model.LastName,
+                    Password = model.Password,
+                    UserName = model.Email
+                };
+
+                var response = await _client.Register(register);
+                if (!string.IsNullOrWhiteSpace(response.UserId))
+                    return true;
+
+                return false;
+            }
+            catch
+            {
+                return false;
+            }
         }
+
+        private IList<Claim> ParseClaims(JwtSecurityToken token)
+        {
+            var claims = token.Claims.ToList();
+            claims.Add(new Claim(ClaimTypes.Name, token.Subject));
+            return claims;
+        }
+
     }
 }

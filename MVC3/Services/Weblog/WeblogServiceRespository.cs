@@ -35,6 +35,7 @@ namespace CleanArchitecture.MVC3.Services.Weblog
             {
                 var response = new GenericResponseApi<int>();
                 var createWeblogDTo = _mapper.Map<CreateWeblogDTOs>(model);
+                AddBearerToken();
                 var apiResponse = await _client.CreateWeblogDTO(createWeblogDTo);
                 if (!apiResponse.Success)
                 {
@@ -63,6 +64,7 @@ namespace CleanArchitecture.MVC3.Services.Weblog
             var response = new GenericResponseApi<int>();
             try
             {
+                AddBearerToken();
                 var apiResponse = await _client.DeleteWeblog(weblogId);
                 if (apiResponse.Success)
                 {
@@ -105,6 +107,7 @@ namespace CleanArchitecture.MVC3.Services.Weblog
             try
             {
                 var updateWeblogDto = _mapper.Map<UpdateWeblogDTOs>(model);
+                AddBearerToken();
                 var apiResponse = await _client.UpdateWeblog(updateWeblogDto);
                 if (apiResponse.Success)
                 {

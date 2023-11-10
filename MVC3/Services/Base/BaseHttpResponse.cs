@@ -1,5 +1,6 @@
 ﻿using CleanArchitecture.MVC3.Contract;
 using CleanArchitecture.MVC3.Model;
+
 using CleanArichitecture.Application.Exeptions;
 
 namespace CleanArchitecture.MVC3.Services.Base
@@ -8,8 +9,8 @@ namespace CleanArchitecture.MVC3.Services.Base
     {
         #region Fields
 
-        private readonly ILocalStorageServiceContract _localStorageService;
-        private readonly IClient _client;
+        public ILocalStorageServiceContract _localStorageService;
+        public IClient _client;
 
         #endregion
 
@@ -25,26 +26,26 @@ namespace CleanArchitecture.MVC3.Services.Base
 
         protected GenericResponseApi<Guid> ConvretApiExceptions<Guid>(ApiException exception)
         {
-            if(exception.StatusCode == 400)
+            if (exception.StatusCode == 400)
             {
-                return new GenericResponseApi<Guid> { Message = exception.Message ,ValidationError=exception.Response,Success=false};
+                return new GenericResponseApi<Guid> { Message = exception.Message, ValidationError = exception.Response, Success = false };
             }
-            if(exception.StatusCode == 404)
+            if (exception.StatusCode == 404)
             {
-                return new GenericResponseApi<Guid> { Message = "Not Found" , Success=false};
+                return new GenericResponseApi<Guid> { Message = "Not Found", Success = false };
             }
             else
             {
-                return new GenericResponseApi<Guid> { Message ="Somethings Went Wrong" , Success=false};
+                return new GenericResponseApi<Guid> { Message = "Somethings Went Wrong", Success = false };
             }
         }
 
-        protected void AddBrearerToken()
+        protected void AddBearerToken()
         {
             if (_localStorageService.ExistsLocalStorage("token"))
             {
                 _client.HttpClient.DefaultRequestHeaders.Authorization =
-                    new System.Net.Http.Headers.AuthenticationHeaderValue("Bearer",_localStorageService.GetLocalStorage<string>("token"));
+                    new System.Net.Http.Headers.AuthenticationHeaderValue("Bearer", _localStorageService.GetLocalStorage<string>("token"));
             }
         }
     }
