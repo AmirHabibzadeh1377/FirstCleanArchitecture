@@ -8631,12 +8631,11 @@
       ]
     },
     "runtime.osx.10.10-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {
-      "sha512": "X7IdhILzr4ROXd8mI1BUCQMSHSQwelUlBjF1JyTKCjXaOGn2fB4EKBxQbCK2VjO3WaWIdlXZL3W6TiIVnrhX4g==",
+      "sha512": "/p8IQT2brFMDa7BHMH71LV+w5Tb3OxoLHxhn6+MGqN5xeqhM2HRHmj+7xQGJnaRn73d7ZTvp6yRCFMvolws4wA==",
       "type": "package",
       "path": "runtime.osx.10.10-x64.runtime.native.system.security.cryptography.openssl/4.3.0",
       "files": [
         ".nupkg.metadata",
-        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "runtime.osx.10.10-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",
@@ -8659,12 +8658,11 @@
       ]
     },
     "runtime.ubuntu.14.04-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {
-      "sha512": "ytoewC6wGorL7KoCAvRfsgoJPJbNq+64k2SqW6JcOAebWsFUvCCYgfzQMrnpvPiEl4OrblUlhF2ji+Q1+SVLrQ==",
+      "sha512": "JGc0pAWRE8lB4Ucygk2pYSKbUPLlAIq6Bczf5/WF2D/VKJEPtYlVUMxk8fbl1zRfTWzSHi+VcFZlaPlWiNxeKg==",
       "type": "package",
       "path": "runtime.ubuntu.14.04-x64.runtime.native.system.security.cryptography.openssl/4.3.0",
       "files": [
         ".nupkg.metadata",
-        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "runtime.ubuntu.14.04-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",
@@ -12940,19 +12938,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Student\\.nuget\\packages\\": {}
+    "C:\\Users\\C1-Student04\\.nuget\\packages\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Student\\Desktop\\New folder\\FirstCleanArchitecture\\MVC3\\MVC3.csproj",
+      "projectUniqueName": "C:\\Users\\C1-Student04\\Desktop\\FirstCleanArchitecture\\MVC3\\MVC3.csproj",
       "projectName": "MVC3",
-      "projectPath": "C:\\Users\\Student\\Desktop\\New folder\\FirstCleanArchitecture\\MVC3\\MVC3.csproj",
-      "packagesPath": "C:\\Users\\Student\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Student\\Desktop\\New folder\\FirstCleanArchitecture\\MVC3\\obj\\",
+      "projectPath": "C:\\Users\\C1-Student04\\Desktop\\FirstCleanArchitecture\\MVC3\\MVC3.csproj",
+      "packagesPath": "C:\\Users\\C1-Student04\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\C1-Student04\\Desktop\\FirstCleanArchitecture\\MVC3\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+      ],
       "configFilePaths": [
-        "C:\\Users\\Student\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\C1-Student04\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -12966,11 +12968,11 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\Student\\Desktop\\New folder\\FirstCleanArchitecture\\CleanArichitecture\\CleanArichitecture.Application.csproj": {
-              "projectPath": "C:\\Users\\Student\\Desktop\\New folder\\FirstCleanArchitecture\\CleanArichitecture\\CleanArichitecture.Application.csproj"
+            "C:\\Users\\C1-Student04\\Desktop\\FirstCleanArchitecture\\CleanArichitecture\\CleanArichitecture.Application.csproj": {
+              "projectPath": "C:\\Users\\C1-Student04\\Desktop\\FirstCleanArchitecture\\CleanArichitecture\\CleanArichitecture.Application.csproj"
             },
-            "C:\\Users\\Student\\Desktop\\New folder\\FirstCleanArchitecture\\ClearnArchitecture.Api\\ClearnArchitecture.Api.csproj": {
-              "projectPath": "C:\\Users\\Student\\Desktop\\New folder\\FirstCleanArchitecture\\ClearnArchitecture.Api\\ClearnArchitecture.Api.csproj"
+            "C:\\Users\\C1-Student04\\Desktop\\FirstCleanArchitecture\\ClearnArchitecture.Api\\ClearnArchitecture.Api.csproj": {
+              "projectPath": "C:\\Users\\C1-Student04\\Desktop\\FirstCleanArchitecture\\ClearnArchitecture.Api\\ClearnArchitecture.Api.csproj"
             }
           }
         }
@@ -13016,7 +13018,8 @@
           "net47",
           "net471",
           "net472",
-          "net48"
+          "net48",
+          "net481"
         ],
         "assetTargetFallback": true,
         "warn": true,
@@ -13028,7 +13031,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.414\\RuntimeIdentifierGraph.json"
       }
     }
   }
