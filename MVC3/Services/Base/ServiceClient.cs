@@ -451,7 +451,7 @@ namespace CleanArchitecture.MVC3.Services.Base
                     request.Method = HttpMethod.Post;
                     PrepareRequest(client, request, urlBuilder);
                     var url = urlBuilder.ToString();
-                    request.RequestUri = new Uri(url,url);
+                    request.RequestUri = new Uri(url,UriKind.RelativeOrAbsolute);
                     PrepareRequest(client, request, url);
                     var response = await client.SendAsync(request, HttpCompletionOption.ResponseHeadersRead, CancellationToken.None);
                     clientDispose = true;

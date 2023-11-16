@@ -29,4 +29,8 @@
     <ProjectReference Include="..\CleanArichitecture\CleanArichitecture.Application.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Migrations\" />
+  </ItemGroup>
+
 </Project>
