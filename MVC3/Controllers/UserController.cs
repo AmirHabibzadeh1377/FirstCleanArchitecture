@@ -1,4 +1,7 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using CleanArichitecture.Application.Models.Idnetity;
+
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Mvc;
 
 using MVC3.Contract;
 using MVC3.Model.ViewModels.UserAccount;
@@ -32,7 +35,7 @@ namespace MVC3.Controllers
         [HttpPost]
         public async Task<IActionResult> Register(RegisterVM model)
         {
-            if(!ModelState.IsValid)
+            if (!ModelState.IsValid)
             {
                 ModelState.AddModelError("", "model state is not valid");
                 return View(model);

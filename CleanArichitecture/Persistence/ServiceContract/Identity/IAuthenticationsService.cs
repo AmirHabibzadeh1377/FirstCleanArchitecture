@@ -1,5 +1,5 @@
 ﻿using CleanArichitecture.Application.Models.Idnetity;
-
+using Microsoft.AspNetCore.Authentication;
 using System.Threading.Tasks;
 
 namespace CleanArichitecture.Application.Persistence.ServiceContract.Identity
@@ -8,5 +8,6 @@ namespace CleanArichitecture.Application.Persistence.ServiceContract.Identity
     {
         Task<AuthResponse> Login(AuthRequest request);
         Task<RegistrationResponse> Register(RegistrationRequest request);
+        AuthenticationProperties GetProvider(string provider, string redirectUrl);
     }
 }

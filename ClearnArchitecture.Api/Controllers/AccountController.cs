@@ -1,6 +1,7 @@
 ﻿using CleanArichitecture.Application.Models.Idnetity;
 using CleanArichitecture.Application.Persistence.ServiceContract.Identity;
 
+using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Mvc;
 using System.Threading.Tasks;
 
@@ -29,6 +30,14 @@ namespace ClearnArchitecture.Api.Controllers
         public async Task<ActionResult<AuthResponse>> Login(AuthRequest reques)
         {
             return Ok(await _authenticationService.Login(reques));
+        }
+
+        [HttpPost("getProvider")]
+        public async Task<ActionResult> GetProvider(string provider)
+        {
+            var redirectUrl = Url.RouteUrl("/ExternalLogin");
+            var properties = _authenticationService.GetProvider(provider, redirectUrl);
+            return Challenge(properties,provider);
         }
 
         [HttpPost("register")]

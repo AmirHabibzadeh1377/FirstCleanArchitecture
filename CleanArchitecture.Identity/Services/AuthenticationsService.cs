@@ -4,6 +4,7 @@ using CleanArichitecture.Application.Constants;
 using CleanArichitecture.Application.Models.Idnetity;
 using CleanArichitecture.Application.Persistence.ServiceContract.Identity;
 
+using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
@@ -13,6 +14,7 @@ using System.Collections.Generic;
 using System.IdentityModel.Tokens.Jwt;
 using System.Linq;
 using System.Security.Claims;
+using System.Security.Policy;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -91,7 +93,7 @@ namespace CleanArchitecture.Identity.Services
             var jwtSecurityToken = await GenerateToken(user);
             var response = new AuthResponse
             {
-                Id = user.Id,
+                 Id = user.Id,
                  Email = user.Email,
                  UserName = user.UserName,
                  Token = new JwtSecurityTokenHandler().WriteToken(jwtSecurityToken)
@@ -99,6 +101,13 @@ namespace CleanArchitecture.Identity.Services
 
             return response;
         }
+
+
+        public  AuthenticationProperties GetProvider(string provider ,string redirectUrl)
+        {
+            return  _signInManager.ConfigureExternalAuthenticationProperties(provider, redirectUrl);
+        }
+
 
         public async Task<JwtSecurityToken> GenerateToken(ApplicationUser user)
         {
