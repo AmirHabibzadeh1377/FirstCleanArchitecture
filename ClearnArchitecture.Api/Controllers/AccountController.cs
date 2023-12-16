@@ -1,8 +1,8 @@
 ﻿using CleanArichitecture.Application.Models.Idnetity;
 using CleanArichitecture.Application.Persistence.ServiceContract.Identity;
-
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Mvc;
+using System.Security.Claims;
 using System.Threading.Tasks;
 
 namespace ClearnArchitecture.Api.Controllers
@@ -32,16 +32,27 @@ namespace ClearnArchitecture.Api.Controllers
             return Ok(await _authenticationService.Login(reques));
         }
 
-        [HttpPost("getProvider")]
-        public async Task<ActionResult> GetProvider(string provider)
+        [Route("getProvider")]
+        public ActionResult<AuthenticationProperties> GetProvider(ProviderRequest request)
         {
-            var redirectUrl = Url.RouteUrl("/ExternalLogin");
-            var properties = _authenticationService.GetProvider(provider, redirectUrl);
-            return Challenge(properties,provider);
+            return Ok(_authenticationService.GetProvider(request.Provider, request.RedirectUrl));
+        }
+
+        [Route("externalLogin")]
+        public async Task<ActionResult> ExternalLogin()
+        {
+            var userEmail = User.FindFirstValue(ClaimTypes.Email);
+            var externalResponse = await _authenticationService.ExternalLogn(userEmail);
+            if (externalResponse.Success)
+            {
+                await HttpContext.SignInAsync(externalResponse.ClaimsPrincipal, externalResponse.AuthenticationProperties);
+            }
+
+            return Content("");
         }
 
         [HttpPost("register")]
-        public async Task<ActionResult<RegistrationResponse>>  Register(RegistrationRequest request)
+        public async Task<ActionResult<RegistrationResponse>> Register(RegistrationRequest request)
         {
             return Ok(await _authenticationService.Register(request));
         }

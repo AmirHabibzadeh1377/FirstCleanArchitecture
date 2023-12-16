@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Authentication.Cookies;
 using MVC3.Contract;
 using MVC3.Model.ViewModels.UserAccount;
 using System.IdentityModel.Tokens.Jwt;
+using System.Linq.Expressions;
 using System.Security.Claims;
 
 namespace MVC3.Services
@@ -16,19 +17,23 @@ namespace MVC3.Services
 
         private readonly IHttpContextAccessor _contextAccessor;
         JwtSecurityTokenHandler jwtSecurityTokenHandler;
+        private readonly ILogger _logger;
 
         #endregion
 
         #region Ctor
 
-        public AuthenticationRepository(IHttpContextAccessor contextAccessor, IClient client, ILocalStorageServiceContract localStorageService)
+        public AuthenticationRepository(IHttpContextAccessor contextAccessor, IClient client, ILocalStorageServiceContract localStorageService, ILogger logger = null)
             : base(localStorageService, client)
         {
             _contextAccessor = contextAccessor;
             jwtSecurityTokenHandler = new JwtSecurityTokenHandler();
+            _logger = logger;
         }
 
         #endregion
+
+        #region Methods
 
         public async Task<bool> Authentication(string email, string password)
         {
@@ -41,14 +46,15 @@ namespace MVC3.Services
                     var tokenContent = jwtSecurityTokenHandler.ReadJwtToken(authResponse.Token);
                     var claims = ParseClaims(tokenContent);
                     var user = new ClaimsPrincipal(new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme));
-                    var login = _contextAccessor.HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, user);
+                    await _contextAccessor.HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, user);
                     _localStorageService.SetLocalStorage("token", authResponse.Token);
                     return true;
                 }
                 return false;
             }
-            catch
+            catch(Exception ex)
             {
+                _logger.LogError(ex.Message);
                 return false;
             }
         }
@@ -84,12 +90,45 @@ namespace MVC3.Services
             }
         }
 
+        public async Task<AuthenticationProperties> GetProvider(ProviderRequest request)
+        {
+            try
+            {
+                return await _client.GetProvider(request);
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex.Message);
+                return null;
+            }
+        }
+        
+        public async Task<bool> ExternalLogin()
+        {
+            try
+            {
+                await _client.ExternalLogin();
+                return true;
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex.Message);
+                return false;
+            }
+        }
+
+        #endregion
+
+        #region Utilities
+
         private IList<Claim> ParseClaims(JwtSecurityToken token)
         {
             var claims = token.Claims.ToList();
             claims.Add(new Claim(ClaimTypes.Name, token.Subject));
             return claims;
         }
+
+        #endregion
 
     }
 }

@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Student\\Desktop\\New folder\\FirstCleanArchitecture\\MVC3\\MVC3.csproj": {}
+    "C:\\Users\\Reza\\Desktop\\Mellat\\FirstCleanArchitecture\\MVC3\\MVC3.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Student\\Desktop\\New folder\\FirstCleanArchitecture\\CleanArchitecture.Domain\\CleanArchitecture.Domain.csproj": {
+    "C:\\Users\\Reza\\Desktop\\Mellat\\FirstCleanArchitecture\\CleanArchitecture.Domain\\CleanArchitecture.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Student\\Desktop\\New folder\\FirstCleanArchitecture\\CleanArchitecture.Domain\\CleanArchitecture.Domain.csproj",
+        "projectUniqueName": "C:\\Users\\Reza\\Desktop\\Mellat\\FirstCleanArchitecture\\CleanArchitecture.Domain\\CleanArchitecture.Domain.csproj",
         "projectName": "CleanArchitecture.Domain",
-        "projectPath": "C:\\Users\\Student\\Desktop\\New folder\\FirstCleanArchitecture\\CleanArchitecture.Domain\\CleanArchitecture.Domain.csproj",
-        "packagesPath": "C:\\Users\\Student\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Student\\Desktop\\New folder\\FirstCleanArchitecture\\CleanArchitecture.Domain\\obj\\",
+        "projectPath": "C:\\Users\\Reza\\Desktop\\Mellat\\FirstCleanArchitecture\\CleanArchitecture.Domain\\CleanArchitecture.Domain.csproj",
+        "packagesPath": "C:\\Users\\Reza\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Reza\\Desktop\\Mellat\\FirstCleanArchitecture\\CleanArchitecture.Domain\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\Student\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Reza\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -45,7 +49,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -54,21 +59,25 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Student\\Desktop\\New folder\\FirstCleanArchitecture\\CleanArchitecture.Identity\\CleanArchitecture.Identity.csproj": {
+    "C:\\Users\\Reza\\Desktop\\Mellat\\FirstCleanArchitecture\\CleanArchitecture.Identity\\CleanArchitecture.Identity.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Student\\Desktop\\New folder\\FirstCleanArchitecture\\CleanArchitecture.Identity\\CleanArchitecture.Identity.csproj",
+        "projectUniqueName": "C:\\Users\\Reza\\Desktop\\Mellat\\FirstCleanArchitecture\\CleanArchitecture.Identity\\CleanArchitecture.Identity.csproj",
         "projectName": "CleanArchitecture.Identity",
-        "projectPath": "C:\\Users\\Student\\Desktop\\New folder\\FirstCleanArchitecture\\CleanArchitecture.Identity\\CleanArchitecture.Identity.csproj",
-        "packagesPath": "C:\\Users\\Student\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Student\\Desktop\\New folder\\FirstCleanArchitecture\\CleanArchitecture.Identity\\obj\\",
+        "projectPath": "C:\\Users\\Reza\\Desktop\\Mellat\\FirstCleanArchitecture\\CleanArchitecture.Identity\\CleanArchitecture.Identity.csproj",
+        "packagesPath": "C:\\Users\\Reza\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Reza\\Desktop\\Mellat\\FirstCleanArchitecture\\CleanArchitecture.Identity\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\Student\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Reza\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -82,8 +91,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\Student\\Desktop\\New folder\\FirstCleanArchitecture\\CleanArichitecture\\CleanArichitecture.Application.csproj": {
-                "projectPath": "C:\\Users\\Student\\Desktop\\New folder\\FirstCleanArchitecture\\CleanArichitecture\\CleanArichitecture.Application.csproj"
+              "C:\\Users\\Reza\\Desktop\\Mellat\\FirstCleanArchitecture\\CleanArichitecture\\CleanArichitecture.Application.csproj": {
+                "projectPath": "C:\\Users\\Reza\\Desktop\\Mellat\\FirstCleanArchitecture\\CleanArichitecture\\CleanArichitecture.Application.csproj"
               }
             }
           }
@@ -98,6 +107,10 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "Microsoft.AspNetCore.Authentication.Google": {
+              "target": "Package",
+              "version": "[6.0.25, )"
+            },
             "Microsoft.AspNetCore.Authentication.JwtBearer": {
               "target": "Package",
               "version": "[6.0.24, )"
@@ -139,7 +152,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -148,21 +162,25 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Student\\Desktop\\New folder\\FirstCleanArchitecture\\CleanArchitecture.Infrastructure\\CleanArchitecture.Infrastructure.csproj": {
+    "C:\\Users\\Reza\\Desktop\\Mellat\\FirstCleanArchitecture\\CleanArchitecture.Infrastructure\\CleanArchitecture.Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Student\\Desktop\\New folder\\FirstCleanArchitecture\\CleanArchitecture.Infrastructure\\CleanArchitecture.Infrastructure.csproj",
+        "projectUniqueName": "C:\\Users\\Reza\\Desktop\\Mellat\\FirstCleanArchitecture\\CleanArchitecture.Infrastructure\\CleanArchitecture.Infrastructure.csproj",
         "projectName": "CleanArchitecture.Infrastructure",
-        "projectPath": "C:\\Users\\Student\\Desktop\\New folder\\FirstCleanArchitecture\\CleanArchitecture.Infrastructure\\CleanArchitecture.Infrastructure.csproj",
-        "packagesPath": "C:\\Users\\Student\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Student\\Desktop\\New folder\\FirstCleanArchitecture\\CleanArchitecture.Infrastructure\\obj\\",
+        "projectPath": "C:\\Users\\Reza\\Desktop\\Mellat\\FirstCleanArchitecture\\CleanArchitecture.Infrastructure\\CleanArchitecture.Infrastructure.csproj",
+        "packagesPath": "C:\\Users\\Reza\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Reza\\Desktop\\Mellat\\FirstCleanArchitecture\\CleanArchitecture.Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\Student\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Reza\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -176,8 +194,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\Student\\Desktop\\New folder\\FirstCleanArchitecture\\CleanArichitecture\\CleanArichitecture.Application.csproj": {
-                "projectPath": "C:\\Users\\Student\\Desktop\\New folder\\FirstCleanArchitecture\\CleanArichitecture\\CleanArichitecture.Application.csproj"
+              "C:\\Users\\Reza\\Desktop\\Mellat\\FirstCleanArchitecture\\CleanArichitecture\\CleanArichitecture.Application.csproj": {
+                "projectPath": "C:\\Users\\Reza\\Desktop\\Mellat\\FirstCleanArchitecture\\CleanArichitecture\\CleanArichitecture.Application.csproj"
               }
             }
           }
@@ -207,7 +225,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -216,21 +235,25 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Student\\Desktop\\New folder\\FirstCleanArchitecture\\CleanArchitecture.Persistence\\CleanArchitecture.Persistence.csproj": {
+    "C:\\Users\\Reza\\Desktop\\Mellat\\FirstCleanArchitecture\\CleanArchitecture.Persistence\\CleanArchitecture.Persistence.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Student\\Desktop\\New folder\\FirstCleanArchitecture\\CleanArchitecture.Persistence\\CleanArchitecture.Persistence.csproj",
+        "projectUniqueName": "C:\\Users\\Reza\\Desktop\\Mellat\\FirstCleanArchitecture\\CleanArchitecture.Persistence\\CleanArchitecture.Persistence.csproj",
         "projectName": "CleanArchitecture.Persistence",
-        "projectPath": "C:\\Users\\Student\\Desktop\\New folder\\FirstCleanArchitecture\\CleanArchitecture.Persistence\\CleanArchitecture.Persistence.csproj",
-        "packagesPath": "C:\\Users\\Student\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Student\\Desktop\\New folder\\FirstCleanArchitecture\\CleanArchitecture.Persistence\\obj\\",
+        "projectPath": "C:\\Users\\Reza\\Desktop\\Mellat\\FirstCleanArchitecture\\CleanArchitecture.Persistence\\CleanArchitecture.Persistence.csproj",
+        "packagesPath": "C:\\Users\\Reza\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Reza\\Desktop\\Mellat\\FirstCleanArchitecture\\CleanArchitecture.Persistence\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\Student\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Reza\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -244,8 +267,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\Student\\Desktop\\New folder\\FirstCleanArchitecture\\CleanArichitecture\\CleanArichitecture.Application.csproj": {
-                "projectPath": "C:\\Users\\Student\\Desktop\\New folder\\FirstCleanArchitecture\\CleanArichitecture\\CleanArichitecture.Application.csproj"
+              "C:\\Users\\Reza\\Desktop\\Mellat\\FirstCleanArchitecture\\CleanArichitecture\\CleanArichitecture.Application.csproj": {
+                "projectPath": "C:\\Users\\Reza\\Desktop\\Mellat\\FirstCleanArchitecture\\CleanArichitecture\\CleanArichitecture.Application.csproj"
               }
             }
           }
@@ -279,7 +302,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -288,21 +312,25 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Student\\Desktop\\New folder\\FirstCleanArchitecture\\CleanArichitecture\\CleanArichitecture.Application.csproj": {
+    "C:\\Users\\Reza\\Desktop\\Mellat\\FirstCleanArchitecture\\CleanArichitecture\\CleanArichitecture.Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Student\\Desktop\\New folder\\FirstCleanArchitecture\\CleanArichitecture\\CleanArichitecture.Application.csproj",
+        "projectUniqueName": "C:\\Users\\Reza\\Desktop\\Mellat\\FirstCleanArchitecture\\CleanArichitecture\\CleanArichitecture.Application.csproj",
         "projectName": "CleanArichitecture.Application",
-        "projectPath": "C:\\Users\\Student\\Desktop\\New folder\\FirstCleanArchitecture\\CleanArichitecture\\CleanArichitecture.Application.csproj",
-        "packagesPath": "C:\\Users\\Student\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Student\\Desktop\\New folder\\FirstCleanArchitecture\\CleanArichitecture\\obj\\",
+        "projectPath": "C:\\Users\\Reza\\Desktop\\Mellat\\FirstCleanArchitecture\\CleanArichitecture\\CleanArichitecture.Application.csproj",
+        "packagesPath": "C:\\Users\\Reza\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Reza\\Desktop\\Mellat\\FirstCleanArchitecture\\CleanArichitecture\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\Student\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Reza\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -316,8 +344,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\Student\\Desktop\\New folder\\FirstCleanArchitecture\\CleanArchitecture.Domain\\CleanArchitecture.Domain.csproj": {
-                "projectPath": "C:\\Users\\Student\\Desktop\\New folder\\FirstCleanArchitecture\\CleanArchitecture.Domain\\CleanArchitecture.Domain.csproj"
+              "C:\\Users\\Reza\\Desktop\\Mellat\\FirstCleanArchitecture\\CleanArchitecture.Domain\\CleanArchitecture.Domain.csproj": {
+                "projectPath": "C:\\Users\\Reza\\Desktop\\Mellat\\FirstCleanArchitecture\\CleanArchitecture.Domain\\CleanArchitecture.Domain.csproj"
               }
             }
           }
@@ -355,7 +383,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -364,21 +393,25 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Student\\Desktop\\New folder\\FirstCleanArchitecture\\ClearnArchitecture.Api\\ClearnArchitecture.Api.csproj": {
+    "C:\\Users\\Reza\\Desktop\\Mellat\\FirstCleanArchitecture\\ClearnArchitecture.Api\\ClearnArchitecture.Api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Student\\Desktop\\New folder\\FirstCleanArchitecture\\ClearnArchitecture.Api\\ClearnArchitecture.Api.csproj",
+        "projectUniqueName": "C:\\Users\\Reza\\Desktop\\Mellat\\FirstCleanArchitecture\\ClearnArchitecture.Api\\ClearnArchitecture.Api.csproj",
         "projectName": "ClearnArchitecture.Api",
-        "projectPath": "C:\\Users\\Student\\Desktop\\New folder\\FirstCleanArchitecture\\ClearnArchitecture.Api\\ClearnArchitecture.Api.csproj",
-        "packagesPath": "C:\\Users\\Student\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Student\\Desktop\\New folder\\FirstCleanArchitecture\\ClearnArchitecture.Api\\obj\\",
+        "projectPath": "C:\\Users\\Reza\\Desktop\\Mellat\\FirstCleanArchitecture\\ClearnArchitecture.Api\\ClearnArchitecture.Api.csproj",
+        "packagesPath": "C:\\Users\\Reza\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Reza\\Desktop\\Mellat\\FirstCleanArchitecture\\ClearnArchitecture.Api\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\Student\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Reza\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -392,20 +425,20 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\Student\\Desktop\\New folder\\FirstCleanArchitecture\\CleanArchitecture.Domain\\CleanArchitecture.Domain.csproj": {
-                "projectPath": "C:\\Users\\Student\\Desktop\\New folder\\FirstCleanArchitecture\\CleanArchitecture.Domain\\CleanArchitecture.Domain.csproj"
+              "C:\\Users\\Reza\\Desktop\\Mellat\\FirstCleanArchitecture\\CleanArchitecture.Domain\\CleanArchitecture.Domain.csproj": {
+                "projectPath": "C:\\Users\\Reza\\Desktop\\Mellat\\FirstCleanArchitecture\\CleanArchitecture.Domain\\CleanArchitecture.Domain.csproj"
               },
-              "C:\\Users\\Student\\Desktop\\New folder\\FirstCleanArchitecture\\CleanArchitecture.Identity\\CleanArchitecture.Identity.csproj": {
-                "projectPath": "C:\\Users\\Student\\Desktop\\New folder\\FirstCleanArchitecture\\CleanArchitecture.Identity\\CleanArchitecture.Identity.csproj"
+              "C:\\Users\\Reza\\Desktop\\Mellat\\FirstCleanArchitecture\\CleanArchitecture.Identity\\CleanArchitecture.Identity.csproj": {
+                "projectPath": "C:\\Users\\Reza\\Desktop\\Mellat\\FirstCleanArchitecture\\CleanArchitecture.Identity\\CleanArchitecture.Identity.csproj"
               },
-              "C:\\Users\\Student\\Desktop\\New folder\\FirstCleanArchitecture\\CleanArchitecture.Infrastructure\\CleanArchitecture.Infrastructure.csproj": {
-                "projectPath": "C:\\Users\\Student\\Desktop\\New folder\\FirstCleanArchitecture\\CleanArchitecture.Infrastructure\\CleanArchitecture.Infrastructure.csproj"
+              "C:\\Users\\Reza\\Desktop\\Mellat\\FirstCleanArchitecture\\CleanArchitecture.Infrastructure\\CleanArchitecture.Infrastructure.csproj": {
+                "projectPath": "C:\\Users\\Reza\\Desktop\\Mellat\\FirstCleanArchitecture\\CleanArchitecture.Infrastructure\\CleanArchitecture.Infrastructure.csproj"
               },
-              "C:\\Users\\Student\\Desktop\\New folder\\FirstCleanArchitecture\\CleanArchitecture.Persistence\\CleanArchitecture.Persistence.csproj": {
-                "projectPath": "C:\\Users\\Student\\Desktop\\New folder\\FirstCleanArchitecture\\CleanArchitecture.Persistence\\CleanArchitecture.Persistence.csproj"
+              "C:\\Users\\Reza\\Desktop\\Mellat\\FirstCleanArchitecture\\CleanArchitecture.Persistence\\CleanArchitecture.Persistence.csproj": {
+                "projectPath": "C:\\Users\\Reza\\Desktop\\Mellat\\FirstCleanArchitecture\\CleanArchitecture.Persistence\\CleanArchitecture.Persistence.csproj"
               },
-              "C:\\Users\\Student\\Desktop\\New folder\\FirstCleanArchitecture\\CleanArichitecture\\CleanArichitecture.Application.csproj": {
-                "projectPath": "C:\\Users\\Student\\Desktop\\New folder\\FirstCleanArchitecture\\CleanArichitecture\\CleanArichitecture.Application.csproj"
+              "C:\\Users\\Reza\\Desktop\\Mellat\\FirstCleanArchitecture\\CleanArichitecture\\CleanArichitecture.Application.csproj": {
+                "projectPath": "C:\\Users\\Reza\\Desktop\\Mellat\\FirstCleanArchitecture\\CleanArichitecture\\CleanArichitecture.Application.csproj"
               }
             }
           }
@@ -441,7 +474,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -453,21 +487,25 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Student\\Desktop\\New folder\\FirstCleanArchitecture\\MVC3\\MVC3.csproj": {
+    "C:\\Users\\Reza\\Desktop\\Mellat\\FirstCleanArchitecture\\MVC3\\MVC3.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Student\\Desktop\\New folder\\FirstCleanArchitecture\\MVC3\\MVC3.csproj",
+        "projectUniqueName": "C:\\Users\\Reza\\Desktop\\Mellat\\FirstCleanArchitecture\\MVC3\\MVC3.csproj",
         "projectName": "MVC3",
-        "projectPath": "C:\\Users\\Student\\Desktop\\New folder\\FirstCleanArchitecture\\MVC3\\MVC3.csproj",
-        "packagesPath": "C:\\Users\\Student\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Student\\Desktop\\New folder\\FirstCleanArchitecture\\MVC3\\obj\\",
+        "projectPath": "C:\\Users\\Reza\\Desktop\\Mellat\\FirstCleanArchitecture\\MVC3\\MVC3.csproj",
+        "packagesPath": "C:\\Users\\Reza\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Reza\\Desktop\\Mellat\\FirstCleanArchitecture\\MVC3\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\Student\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Reza\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -481,11 +519,11 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\Student\\Desktop\\New folder\\FirstCleanArchitecture\\CleanArichitecture\\CleanArichitecture.Application.csproj": {
-                "projectPath": "C:\\Users\\Student\\Desktop\\New folder\\FirstCleanArchitecture\\CleanArichitecture\\CleanArichitecture.Application.csproj"
+              "C:\\Users\\Reza\\Desktop\\Mellat\\FirstCleanArchitecture\\CleanArichitecture\\CleanArichitecture.Application.csproj": {
+                "projectPath": "C:\\Users\\Reza\\Desktop\\Mellat\\FirstCleanArchitecture\\CleanArichitecture\\CleanArichitecture.Application.csproj"
               },
-              "C:\\Users\\Student\\Desktop\\New folder\\FirstCleanArchitecture\\ClearnArchitecture.Api\\ClearnArchitecture.Api.csproj": {
-                "projectPath": "C:\\Users\\Student\\Desktop\\New folder\\FirstCleanArchitecture\\ClearnArchitecture.Api\\ClearnArchitecture.Api.csproj"
+              "C:\\Users\\Reza\\Desktop\\Mellat\\FirstCleanArchitecture\\ClearnArchitecture.Api\\ClearnArchitecture.Api.csproj": {
+                "projectPath": "C:\\Users\\Reza\\Desktop\\Mellat\\FirstCleanArchitecture\\ClearnArchitecture.Api\\ClearnArchitecture.Api.csproj"
               }
             }
           }
@@ -531,7 +569,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -543,7 +582,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
         }
       }
     }

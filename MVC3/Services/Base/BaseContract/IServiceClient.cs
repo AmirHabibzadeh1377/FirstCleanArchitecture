@@ -1,7 +1,8 @@
-﻿using CleanArchitecture.MVC3.Model;
-using CleanArichitecture.Application.DTOs.Weblog;
+﻿using CleanArichitecture.Application.DTOs.Weblog;
 using CleanArichitecture.Application.Models.Idnetity;
 using CleanArichitecture.Application.Responses;
+
+using Microsoft.AspNetCore.Authentication;
 
 namespace CleanArchitecture.MVC3.Services.Base
 {
@@ -14,5 +15,7 @@ namespace CleanArchitecture.MVC3.Services.Base
         Task<BaseCommandResponse> DeleteWeblog(int id);
         Task<AuthResponse> Login(AuthRequest request);
         Task<RegistrationResponse> Register(RegistrationRequest request);
+        Task<ExternalResponse> ExternalLogin();
+        Task<AuthenticationProperties> GetProvider(ProviderRequest request);
     }
 }

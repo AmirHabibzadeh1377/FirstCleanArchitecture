@@ -1,20 +1,17 @@
 ﻿using CleanArchitecture.Identity.Models;
-
 using CleanArichitecture.Application.Constants;
 using CleanArichitecture.Application.Models.Idnetity;
 using CleanArichitecture.Application.Persistence.ServiceContract.Identity;
-
 using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
-
 using System;
 using System.Collections.Generic;
 using System.IdentityModel.Tokens.Jwt;
 using System.Linq;
 using System.Security.Claims;
-using System.Security.Policy;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -24,7 +21,7 @@ namespace CleanArchitecture.Identity.Services
     {
         #region Fields
 
-        private readonly UserManager<ApplicationUser> _userManager;        
+        private readonly UserManager<ApplicationUser> _userManager;
         private readonly JwtSetting _jwtSetting;
         private readonly SignInManager<ApplicationUser> _signInManager;
 
@@ -44,7 +41,7 @@ namespace CleanArchitecture.Identity.Services
         #endregion
 
         #region Register
-        
+
         public async Task<RegistrationResponse> Register(RegistrationRequest request)
         {
             var existingUser = await _userManager.FindByNameAsync(request.UserName);
@@ -93,21 +90,48 @@ namespace CleanArchitecture.Identity.Services
             var jwtSecurityToken = await GenerateToken(user);
             var response = new AuthResponse
             {
-                 Id = user.Id,
-                 Email = user.Email,
-                 UserName = user.UserName,
-                 Token = new JwtSecurityTokenHandler().WriteToken(jwtSecurityToken)
+                Id = user.Id,
+                Email = user.Email,
+                UserName = user.UserName,
+                Token = new JwtSecurityTokenHandler().WriteToken(jwtSecurityToken)
             };
 
             return response;
         }
 
 
-        public  AuthenticationProperties GetProvider(string provider ,string redirectUrl)
+        public AuthenticationProperties GetProvider(string provider, string redirectUrl)
         {
-            return  _signInManager.ConfigureExternalAuthenticationProperties(provider, redirectUrl);
+            return _signInManager.ConfigureExternalAuthenticationProperties(provider, redirectUrl);
         }
 
+        public async Task<ExternalResponse> ExternalLogn(string email)
+        {
+            var user = await _userManager.FindByEmailAsync(email);
+            if (user != null)
+            {
+                var claims = new List<Claim>()
+                {
+                    new Claim(ClaimTypes.NameIdentifier,user.UserId.ToString()),
+                    new Claim(ClaimTypes.Name,user.UserName)
+                };
+                var identity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
+                var principal = new ClaimsPrincipal(identity);
+                var properties = new AuthenticationProperties
+                {
+                    IsPersistent = true
+                };
+
+                return new ExternalResponse
+                {
+                    AuthenticationProperties = properties,
+                    ClaimsPrincipal = principal,
+                    Success = true,
+                };
+            }
+            return
+                new ExternalResponse { Success = false };
+        }
 
         public async Task<JwtSecurityToken> GenerateToken(ApplicationUser user)
         {
@@ -115,7 +139,7 @@ namespace CleanArchitecture.Identity.Services
             var roles = await _userManager.GetRolesAsync(user);
             var roleClaims = new List<Claim>();
             for (var i = 0; i < roles.Count; i++)
-                roleClaims.Add(new Claim(ClaimTypes.Role,roles[i]));
+                roleClaims.Add(new Claim(ClaimTypes.Role, roles[i]));
 
             var claims = new[]
             {
@@ -136,6 +160,6 @@ namespace CleanArchitecture.Identity.Services
 
             return jwtSecurityToken;
         }
-       
+
     }
 }

@@ -86,5 +86,26 @@ namespace MVC3.Controllers
 
 
         #endregion
+
+        #region ExternalLogin
+
+        [Route("provider/{provider}")]
+        [HttpGet]
+        public async Task<IActionResult> GetProvicer(ProviderRequest request)
+        {
+            request.RedirectUrl = Url.RouteUrl("ExternalLogin123", Request.Scheme);
+            var result = await _authenticationService.GetProvider(request);
+            return Challenge(result,request.Provider);
+        }
+
+        [Route("ExternalLogin",Name = "ExternalLogin123")]
+        [HttpGet]
+        public async Task<IActionResult> ExternalLogin()
+        {
+             var result = await _authenticationService.ExternalLogin();
+            return Content("");
+        }
+
+        #endregion
     }
 }

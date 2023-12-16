@@ -13,3 +13,18 @@ C:\Users\Student\Desktop\New folder\FirstCleanArchitecture\CleanArichitecture\ob
 C:\Users\Student\Desktop\New folder\FirstCleanArchitecture\CleanArichitecture\obj\Debug\net6.0\CleanArichitecture.Application.dll
 C:\Users\Student\Desktop\New folder\FirstCleanArchitecture\CleanArichitecture\obj\Debug\net6.0\ref\CleanArichitecture.Application.dll
 C:\Users\Student\Desktop\New folder\FirstCleanArchitecture\CleanArichitecture\obj\Debug\net6.0\CleanArichitecture.Application.pdb
+C:\Users\Reza\Desktop\Mellat\FirstCleanArchitecture\CleanArichitecture\bin\Debug\net6.0\CleanArichitecture.Application.deps.json
+C:\Users\Reza\Desktop\Mellat\FirstCleanArchitecture\CleanArichitecture\bin\Debug\net6.0\CleanArichitecture.Application.dll
+C:\Users\Reza\Desktop\Mellat\FirstCleanArchitecture\CleanArichitecture\bin\Debug\net6.0\CleanArichitecture.Application.pdb
+C:\Users\Reza\Desktop\Mellat\FirstCleanArchitecture\CleanArichitecture\bin\Debug\net6.0\CleanArchitecture.Domain.dll
+C:\Users\Reza\Desktop\Mellat\FirstCleanArchitecture\CleanArichitecture\bin\Debug\net6.0\CleanArchitecture.Domain.pdb
+C:\Users\Reza\Desktop\Mellat\FirstCleanArchitecture\CleanArichitecture\obj\Debug\net6.0\CleanArichitecture.Application.csproj.AssemblyReference.cache
+C:\Users\Reza\Desktop\Mellat\FirstCleanArchitecture\CleanArichitecture\obj\Debug\net6.0\CleanArichitecture.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Reza\Desktop\Mellat\FirstCleanArchitecture\CleanArichitecture\obj\Debug\net6.0\CleanArichitecture.Application.AssemblyInfoInputs.cache
+C:\Users\Reza\Desktop\Mellat\FirstCleanArchitecture\CleanArichitecture\obj\Debug\net6.0\CleanArichitecture.Application.AssemblyInfo.cs
+C:\Users\Reza\Desktop\Mellat\FirstCleanArchitecture\CleanArichitecture\obj\Debug\net6.0\CleanArichitecture.Application.csproj.CoreCompileInputs.cache
+C:\Users\Reza\Desktop\Mellat\FirstCleanArchitecture\CleanArichitecture\obj\Debug\net6.0\CleanArichitecture.Application.csproj.CopyComplete
+C:\Users\Reza\Desktop\Mellat\FirstCleanArchitecture\CleanArichitecture\obj\Debug\net6.0\CleanArichitecture.Application.dll
+C:\Users\Reza\Desktop\Mellat\FirstCleanArchitecture\CleanArichitecture\obj\Debug\net6.0\refint\CleanArichitecture.Application.dll
+C:\Users\Reza\Desktop\Mellat\FirstCleanArchitecture\CleanArichitecture\obj\Debug\net6.0\CleanArichitecture.Application.pdb
+C:\Users\Reza\Desktop\Mellat\FirstCleanArchitecture\CleanArichitecture\obj\Debug\net6.0\ref\CleanArichitecture.Application.dll
