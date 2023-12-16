@@ -5,6 +5,7 @@ using CleanArichitecture.Application.Models.Idnetity;
 using CleanArichitecture.Application.Persistence.ServiceContract.Identity;
 
 using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Authentication.Google;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
@@ -36,9 +37,8 @@ namespace CleanArchitecture.Identity
 
             services.AddAuthentication(options =>
             {
-                options.DefaultAuthenticateScheme = CookieAuthenticationDefaults.AuthenticationScheme;
-                options.DefaultChallengeScheme = CookieAuthenticationDefaults.AuthenticationScheme;
-                options.DefaultSignInScheme = CookieAuthenticationDefaults.AuthenticationScheme;
+                options.DefaultScheme = CookieAuthenticationDefaults.AuthenticationScheme;
+                options.DefaultChallengeScheme = GoogleDefaults.AuthenticationScheme;
             }).AddCookie(options =>
                 {
                     options.LoginPath = "/User/Login";
@@ -48,6 +48,7 @@ namespace CleanArchitecture.Identity
                {
                    options.ClientId = "827321804290-h782qne630emp0hresbjec29s6j1vjg2.apps.googleusercontent.com";
                    options.ClientSecret = "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";
+                   options.CallbackPath = "/User/External";
                });
 
             return services;
